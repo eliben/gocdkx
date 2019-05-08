@@ -51,7 +51,6 @@ require (
 	github.com/hashicorp/go-rootcerts v1.0.0 // indirect
 	github.com/hashicorp/go-sockaddr v1.0.2 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
-	github.com/hashicorp/vault v1.1.2
 	github.com/jonboulle/clockwork v0.1.0 // indirect
 	github.com/lib/pq v1.1.0
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
