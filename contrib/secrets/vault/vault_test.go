@@ -21,10 +21,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hashicorp/vault/api"
 	"github.com/eliben/gocdkx/secrets"
 	"github.com/eliben/gocdkx/secrets/driver"
 	"github.com/eliben/gocdkx/secrets/drivertest"
+	"github.com/hashicorp/vault/api"
 )
 
 // To run these tests against a real Vault server, first run ./localvault.sh.
@@ -61,7 +61,7 @@ func newHarness(ctx context.Context, t *testing.T) (drivertest.Harness, error) {
 	c.SetClientTimeout(3 * time.Second)
 	// Enable the Transit Secrets Engine to use Vault as an Encryption as a Service.
 	if _, err := c.Logical().Write("sys/mounts/transit", map[string]interface{}{"type": "transit"}); err != nil {
-		t.Skip(err, "run secrets/vault/localvault.sh to start a dev vault container")
+		//t.Skip(err, "run secrets/vault/localvault.sh to start a dev vault container")
 	}
 
 	return &harness{
