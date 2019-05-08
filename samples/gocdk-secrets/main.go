@@ -24,15 +24,15 @@ import (
 	"log"
 	"os"
 
-	"github.com/google/subcommands"
 	"github.com/eliben/gocdkx/secrets"
+	"github.com/google/subcommands"
 
 	// Import the secrets driver packages we want to be able to open.
+	_ "github.com/eliben/gocdkx/contrib/secrets/vault"
 	_ "github.com/eliben/gocdkx/secrets/awskms"
 	_ "github.com/eliben/gocdkx/secrets/azurekeyvault"
 	_ "github.com/eliben/gocdkx/secrets/gcpkms"
 	_ "github.com/eliben/gocdkx/secrets/localsecrets"
-	_ "github.com/eliben/gocdkx/secrets/vault"
 )
 
 const helpSuffix = `
