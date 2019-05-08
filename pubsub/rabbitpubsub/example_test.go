@@ -19,12 +19,12 @@ import (
 	"log"
 
 	"github.com/streadway/amqp"
-	"gocloud.dev/pubsub"
-	"gocloud.dev/pubsub/rabbitpubsub"
+	"github.com/eliben/gocdkx/pubsub"
+	"github.com/eliben/gocdkx/pubsub/rabbitpubsub"
 )
 
 func ExampleOpenTopic() {
-	// This example is used in https://gocloud.dev/howto/pubsub/publish/#rabbitmq-ctor
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/publish/#rabbitmq-ctor
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -39,7 +39,7 @@ func ExampleOpenTopic() {
 }
 
 func ExampleOpenSubscription() {
-	// This example is used in https://gocloud.dev/howto/pubsub/subscribe/#rabbitmq-ctor
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/subscribe/#rabbitmq-ctor
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -54,9 +54,9 @@ func ExampleOpenSubscription() {
 }
 
 func Example_openTopic() {
-	// This example is used in https://gocloud.dev/howto/pubsub/publish/#rabbitmq
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/publish/#rabbitmq
 
-	// import _ "gocloud.dev/pubsub/rabbitpubsub"
+	// import _ "github.com/eliben/gocdkx/pubsub/rabbitpubsub"
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -72,9 +72,9 @@ func Example_openTopic() {
 }
 
 func Example_openSubscription() {
-	// This example is used in https://gocloud.dev/howto/pubsub/subscribe/#rabbitmq
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/subscribe/#rabbitmq
 
-	// import _ "gocloud.dev/pubsub/rabbitpubsub"
+	// import _ "github.com/eliben/gocdkx/pubsub/rabbitpubsub"
 
 	// Variables set up elsewhere:
 	ctx := context.Background()

@@ -19,7 +19,7 @@ import (
 	"fmt"
 	"log"
 
-	"gocloud.dev/pubsub"
+	"github.com/eliben/gocdkx/pubsub"
 
 	pbraw "cloud.google.com/go/pubsub/apiv1"
 	pbapi "google.golang.org/genproto/googleapis/pubsub/v1"
@@ -27,7 +27,7 @@ import (
 )
 
 func ExampleTopic_Send() {
-	// This example is used in https://gocloud.dev/howto/pubsub/publish/
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/publish/
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -48,7 +48,7 @@ func ExampleTopic_Send() {
 }
 
 func ExampleSubscription_Receive() {
-	// This example is used in https://gocloud.dev/howto/pubsub/subscribe/
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/subscribe/
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -70,7 +70,7 @@ func ExampleSubscription_Receive() {
 }
 
 func ExampleSubscription_Receive_concurrent() {
-	// This example is used in https://gocloud.dev/howto/pubsub/subscribe/
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/subscribe/
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -120,7 +120,7 @@ func ExampleMessage_As() {
 	// This example is specific to the gcppubsub implementation; it demonstrates
 	// access to the underlying PubsubMessage type.
 	// The types exposed for As by gcppubsub are documented in
-	// https://godoc.org/gocloud.dev/pubsub/gcppubsub#hdr-As
+	// https://godoc.org/github.com/eliben/gocdkx/pubsub/gcppubsub#hdr-As
 
 	ctx := context.Background()
 	sub, err := pubsub.OpenSubscription(ctx, "gcppubsub://project/topic")
@@ -144,7 +144,7 @@ func ExampleSubscription_As() {
 	// This example is specific to the gcppubsub implementation; it demonstrates
 	// access to the underlying SubscriberClient type.
 	// The types exposed for As by gcppubsub are documented in
-	// https://godoc.org/gocloud.dev/pubsub/gcppubsub#hdr-As
+	// https://godoc.org/github.com/eliben/gocdkx/pubsub/gcppubsub#hdr-As
 
 	ctx := context.Background()
 	sub, err := pubsub.OpenSubscription(ctx, "gcppubsub://project/topic")
@@ -163,7 +163,7 @@ func ExampleSubscription_ErrorAs() {
 	// This example is specific to the gcppubsub implementation; it demonstrates
 	// access to the underlying Status type.
 	// The types exposed for As by gcppubsub are documented in
-	// https://godoc.org/gocloud.dev/pubsub/gcppubsub#hdr-As
+	// https://godoc.org/github.com/eliben/gocdkx/pubsub/gcppubsub#hdr-As
 
 	ctx := context.Background()
 	sub, err := pubsub.OpenSubscription(ctx, "gcppubsub://project/badtopic")
@@ -187,7 +187,7 @@ func ExampleTopic_As() {
 	// This example is specific to the gcppubsub implementation; it demonstrates
 	// access to the underlying PublisherClient type.
 	// The types exposed for As by gcppubsub are documented in
-	// https://godoc.org/gocloud.dev/pubsub/gcppubsub#hdr-As
+	// https://godoc.org/github.com/eliben/gocdkx/pubsub/gcppubsub#hdr-As
 
 	ctx := context.Background()
 	topic, err := pubsub.OpenTopic(ctx, "gcppubsub://project/topic")
@@ -206,7 +206,7 @@ func ExampleTopic_ErrorAs() {
 	// This example is specific to the gcppubsub implementation; it demonstrates
 	// access to the underlying Status type.
 	// The types exposed for As by gcppubsub are documented in
-	// https://godoc.org/gocloud.dev/pubsub/gcppubsub#hdr-As
+	// https://godoc.org/github.com/eliben/gocdkx/pubsub/gcppubsub#hdr-As
 
 	ctx := context.Background()
 	topic, err := pubsub.OpenTopic(ctx, "gcppubsub://project/topic")

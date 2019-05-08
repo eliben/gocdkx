@@ -19,12 +19,12 @@ import (
 	"log"
 
 	"github.com/nats-io/go-nats"
-	"gocloud.dev/pubsub"
-	"gocloud.dev/pubsub/natspubsub"
+	"github.com/eliben/gocdkx/pubsub"
+	"github.com/eliben/gocdkx/pubsub/natspubsub"
 )
 
 func ExampleOpenTopic() {
-	// This example is used in https://gocloud.dev/howto/pubsub/publish/#nats-ctor
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/publish/#nats-ctor
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -43,7 +43,7 @@ func ExampleOpenTopic() {
 }
 
 func ExampleOpenSubscription() {
-	// This example is used in https://gocloud.dev/howto/pubsub/subscribe/#nats-ctor
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/subscribe/#nats-ctor
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -66,9 +66,9 @@ func ExampleOpenSubscription() {
 }
 
 func Example_openTopic() {
-	// This example is used in https://gocloud.dev/howto/pubsub/publish/#nats
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/publish/#nats
 
-	// import _ "gocloud.dev/pubsub/natspubsub"
+	// import _ "github.com/eliben/gocdkx/pubsub/natspubsub"
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -84,9 +84,9 @@ func Example_openTopic() {
 }
 
 func Example_openSubscription() {
-	// This example is used in https://gocloud.dev/howto/pubsub/subscribe/#nats
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/subscribe/#nats
 
-	// import _ "gocloud.dev/pubsub/natspubsub"
+	// import _ "github.com/eliben/gocdkx/pubsub/natspubsub"
 
 	// Variables set up elsewhere:
 	ctx := context.Background()

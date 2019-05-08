@@ -24,14 +24,14 @@ import (
 
 	"cloud.google.com/go/storage"
 	"github.com/aws/aws-sdk-go/aws/awserr"
-	"gocloud.dev/blob"
-	"gocloud.dev/blob/fileblob"
-	_ "gocloud.dev/blob/gcsblob"
-	_ "gocloud.dev/blob/s3blob"
+	"github.com/eliben/gocdkx/blob"
+	"github.com/eliben/gocdkx/blob/fileblob"
+	_ "github.com/eliben/gocdkx/blob/gcsblob"
+	_ "github.com/eliben/gocdkx/blob/s3blob"
 )
 
 func ExampleBucket_NewReader() {
-	// This example is used in https://gocloud.dev/howto/blob/data/#reading
+	// This example is used in https://github.com/eliben/gocdkx/howto/blob/data/#reading
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -53,7 +53,7 @@ func ExampleBucket_NewReader() {
 }
 
 func ExampleBucket_NewRangeReader() {
-	// This example is used in https://gocloud.dev/howto/blob/data/#reading
+	// This example is used in https://github.com/eliben/gocdkx/howto/blob/data/#reading
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -72,7 +72,7 @@ func ExampleBucket_NewRangeReader() {
 }
 
 func ExampleBucket_NewWriter() {
-	// This example is used in https://gocloud.dev/howto/blob/data/#writing
+	// This example is used in https://github.com/eliben/gocdkx/howto/blob/data/#writing
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -95,7 +95,7 @@ func ExampleBucket_NewWriter() {
 }
 
 func ExampleBucket_NewWriter_cancel() {
-	// This example is used in https://gocloud.dev/howto/blob/data/#writing
+	// This example is used in https://github.com/eliben/gocdkx/howto/blob/data/#writing
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -123,7 +123,7 @@ func ExampleBucket_NewWriter_cancel() {
 }
 
 func ExampleBucket_Delete() {
-	// This example is used in https://gocloud.dev/howto/blob/data/#deleting
+	// This example is used in https://github.com/eliben/gocdkx/howto/blob/data/#deleting
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -169,7 +169,7 @@ func ExampleBucket_ErrorAs() {
 	// This example is specific to the s3blob implementation; it demonstrates
 	// access to the underlying awserr.Error type.
 	// The types exposed for ErrorAs by s3blob are documented in
-	// https://godoc.org/gocloud.dev/blob/s3blob#hdr-As
+	// https://godoc.org/github.com/eliben/gocdkx/blob/s3blob#hdr-As
 
 	ctx := context.Background()
 
@@ -298,7 +298,7 @@ func ExampleBucket_As() {
 	// This example is specific to the gcsblob implementation; it demonstrates
 	// access to the underlying cloud.google.com/go/storage.Client type.
 	// The types exposed for As by gcsblob are documented in
-	// https://godoc.org/gocloud.dev/blob/gcsblob#hdr-As
+	// https://godoc.org/github.com/eliben/gocdkx/blob/gcsblob#hdr-As
 
 	// This URL will open the bucket "my-bucket" using default credentials.
 	ctx := context.Background()
@@ -325,7 +325,7 @@ func ExampleWriterOptions() {
 	// This example is specific to the gcsblob implementation; it demonstrates
 	// access to the underlying cloud.google.com/go/storage.Writer type.
 	// The types exposed for As by gcsblob are documented in
-	// https://godoc.org/gocloud.dev/blob/gcsblob#hdr-As
+	// https://godoc.org/github.com/eliben/gocdkx/blob/gcsblob#hdr-As
 
 	ctx := context.Background()
 
@@ -353,7 +353,7 @@ func ExampleListObject_As() {
 	// This example is specific to the gcsblob implementation; it demonstrates
 	// access to the underlying cloud.google.com/go/storage.ObjectAttrs type.
 	// The types exposed for As by gcsblob are documented in
-	// https://godoc.org/gocloud.dev/blob/gcsblob#hdr-As
+	// https://godoc.org/github.com/eliben/gocdkx/blob/gcsblob#hdr-As
 
 	ctx := context.Background()
 
@@ -384,7 +384,7 @@ func ExampleListOptions() {
 	// This example is specific to the gcsblob implementation; it demonstrates
 	// access to the underlying cloud.google.com/go/storage.Query type.
 	// The types exposed for As by gcsblob are documented in
-	// https://godoc.org/gocloud.dev/blob/gcsblob#hdr-As
+	// https://godoc.org/github.com/eliben/gocdkx/blob/gcsblob#hdr-As
 
 	ctx := context.Background()
 
@@ -420,7 +420,7 @@ func ExampleReader_As() {
 	// This example is specific to the gcsblob implementation; it demonstrates
 	// access to the underlying cloud.google.com/go/storage.Reader type.
 	// The types exposed for As by gcsblob are documented in
-	// https://godoc.org/gocloud.dev/blob/gcsblob#hdr-As
+	// https://godoc.org/github.com/eliben/gocdkx/blob/gcsblob#hdr-As
 
 	ctx := context.Background()
 
@@ -447,7 +447,7 @@ func ExampleAttributes_As() {
 	// This example is specific to the gcsblob implementation; it demonstrates
 	// access to the underlying cloud.google.com/go/storage.ObjectAttrs type.
 	// The types exposed for As by gcsblob are documented in
-	// https://godoc.org/gocloud.dev/blob/gcsblob#hdr-As
+	// https://godoc.org/github.com/eliben/gocdkx/blob/gcsblob#hdr-As
 	ctx := context.Background()
 
 	b, err := blob.OpenBucket(ctx, "gs://my-bucket")

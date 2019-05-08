@@ -18,13 +18,13 @@ import (
 	"context"
 	"log"
 
-	"gocloud.dev/blob"
-	"gocloud.dev/blob/gcsblob"
-	"gocloud.dev/gcp"
+	"github.com/eliben/gocdkx/blob"
+	"github.com/eliben/gocdkx/blob/gcsblob"
+	"github.com/eliben/gocdkx/gcp"
 )
 
 func Example() {
-	// This example is used in https://gocloud.dev/howto/blob/open-bucket/#gcs-ctor
+	// This example is used in https://github.com/eliben/gocdkx/howto/blob/open-bucket/#gcs-ctor
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -56,9 +56,9 @@ func Example() {
 }
 
 func Example_openBucket() {
-	// This example is used in https://gocloud.dev/howto/blob/open-bucket/#gcs
+	// This example is used in https://github.com/eliben/gocdkx/howto/blob/open-bucket/#gcs
 
-	// import _ "gocloud.dev/blob/gcsblob"
+	// import _ "github.com/eliben/gocdkx/blob/gcsblob"
 
 	// Variables set up elsewhere:
 	ctx := context.Background()

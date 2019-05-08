@@ -131,7 +131,7 @@ func gitSync(ctx context.Context, gitPath string, dst, src remoteGitBranch) erro
 	err = runCommand(ctx, tempDir, gitPath, []string{
 		// Use Contribute Bot identity for created commits.
 		"-c", "user.name=Contribute Bot",
-		"-c", "user.email=noreply@gocloud.dev",
+		"-c", "user.email=noreply@github.com/eliben/gocdkx",
 		// Use pull: fetch + merge.
 		"pull",
 		"--quiet",

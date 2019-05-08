@@ -18,7 +18,7 @@ import (
 	"context"
 	"testing"
 
-	"gocloud.dev/internal/testing/terraform"
+	"github.com/eliben/gocdkx/internal/testing/terraform"
 )
 
 func TestOpen(t *testing.T) {

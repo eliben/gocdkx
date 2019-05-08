@@ -30,7 +30,7 @@ import (
 	"strings"
 
 	"github.com/golang/protobuf/ptypes/wrappers"
-	"gocloud.dev/internal/docstore/driver"
+	"github.com/eliben/gocdkx/internal/docstore/driver"
 	pb "google.golang.org/genproto/googleapis/firestore/v1"
 )
 

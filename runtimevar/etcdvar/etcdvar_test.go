@@ -24,9 +24,9 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"go.etcd.io/etcd/clientv3"
 	"go.etcd.io/etcd/etcdserver/api/v3rpc/rpctypes"
-	"gocloud.dev/runtimevar"
-	"gocloud.dev/runtimevar/driver"
-	"gocloud.dev/runtimevar/drivertest"
+	"github.com/eliben/gocdkx/runtimevar"
+	"github.com/eliben/gocdkx/runtimevar/driver"
+	"github.com/eliben/gocdkx/runtimevar/drivertest"
 )
 
 // To run these tests against a local etcd server, first run ./localetcd.sh.

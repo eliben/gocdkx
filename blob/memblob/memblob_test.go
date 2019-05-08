@@ -19,9 +19,9 @@ import (
 	"net/http"
 	"testing"
 
-	"gocloud.dev/blob"
-	"gocloud.dev/blob/driver"
-	"gocloud.dev/blob/drivertest"
+	"github.com/eliben/gocdkx/blob"
+	"github.com/eliben/gocdkx/blob/driver"
+	"github.com/eliben/gocdkx/blob/drivertest"
 )
 
 type harness struct{}

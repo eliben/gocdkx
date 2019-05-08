@@ -14,14 +14,14 @@
 
 // Package driver defines a set of interfaces that the blob package uses to interact
 // with the underlying blob services.
-package driver // import "gocloud.dev/blob/driver"
+package driver // import "github.com/eliben/gocdkx/blob/driver"
 
 import (
 	"context"
 	"io"
 	"time"
 
-	"gocloud.dev/gcerrors"
+	"github.com/eliben/gocdkx/gcerrors"
 )
 
 // ReaderOptions controls Reader behaviors.
@@ -224,12 +224,12 @@ type Bucket interface {
 	ErrorCode(error) gcerrors.ErrorCode
 
 	// As converts i to provider-specific types.
-	// See https://godoc.org/gocloud.dev#hdr-As for background information.
+	// See https://godoc.org/github.com/eliben/gocdkx#hdr-As for background information.
 	As(i interface{}) bool
 
 	// ErrorAs allows providers to expose provider-specific types for returned
 	// errors.
-	// See https://godoc.org/gocloud.dev#hdr-As for background information.
+	// See https://godoc.org/github.com/eliben/gocdkx#hdr-As for background information.
 	ErrorAs(error, interface{}) bool
 
 	// Attributes returns attributes for the blob. If the specified object does

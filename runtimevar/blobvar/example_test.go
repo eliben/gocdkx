@@ -19,9 +19,9 @@ import (
 	"fmt"
 	"log"
 
-	"gocloud.dev/blob/memblob"
-	"gocloud.dev/runtimevar"
-	"gocloud.dev/runtimevar/blobvar"
+	"github.com/eliben/gocdkx/blob/memblob"
+	"github.com/eliben/gocdkx/runtimevar"
+	"github.com/eliben/gocdkx/runtimevar/blobvar"
 )
 
 // MyConfig is a sample configuration struct.

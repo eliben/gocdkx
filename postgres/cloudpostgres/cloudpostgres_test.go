@@ -23,9 +23,9 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"gocloud.dev/gcp"
-	"gocloud.dev/gcp/cloudsql"
-	"gocloud.dev/internal/testing/terraform"
+	"github.com/eliben/gocdkx/gcp"
+	"github.com/eliben/gocdkx/gcp/cloudsql"
+	"github.com/eliben/gocdkx/internal/testing/terraform"
 )
 
 func TestOpen(t *testing.T) {

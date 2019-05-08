@@ -20,8 +20,8 @@ import (
 	"strings"
 	"testing"
 
-	"gocloud.dev/aws/rds"
-	"gocloud.dev/internal/testing/terraform"
+	"github.com/eliben/gocdkx/aws/rds"
+	"github.com/eliben/gocdkx/internal/testing/terraform"
 )
 
 func TestOpen(t *testing.T) {

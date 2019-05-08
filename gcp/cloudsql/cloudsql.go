@@ -14,13 +14,13 @@
 
 // Package cloudsql contains Wire providers that are common across Google Cloud
 // SQL.
-package cloudsql // import "gocloud.dev/gcp/cloudsql"
+package cloudsql // import "github.com/eliben/gocdkx/gcp/cloudsql"
 
 import (
 	"github.com/GoogleCloudPlatform/cloudsql-proxy/proxy/certs"
 	"github.com/GoogleCloudPlatform/cloudsql-proxy/proxy/proxy"
 	"github.com/google/wire"
-	"gocloud.dev/gcp"
+	"github.com/eliben/gocdkx/gcp"
 )
 
 // CertSourceSet is a Wire provider set that binds a Cloud SQL proxy

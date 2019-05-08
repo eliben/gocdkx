@@ -20,7 +20,7 @@ import (
 
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/dynamodb"
-	"gocloud.dev/internal/docstore/dynamodocstore"
+	"github.com/eliben/gocdkx/internal/docstore/dynamodocstore"
 )
 
 func Example() {

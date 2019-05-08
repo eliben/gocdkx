@@ -25,8 +25,8 @@ import (
 
 	"github.com/golang/protobuf/ptypes"
 	ts "github.com/golang/protobuf/ptypes/timestamp"
-	"gocloud.dev/internal/docstore"
-	"gocloud.dev/internal/docstore/driver"
+	"github.com/eliben/gocdkx/internal/docstore"
+	"github.com/eliben/gocdkx/internal/docstore/driver"
 	pb "google.golang.org/genproto/googleapis/firestore/v1"
 	"google.golang.org/genproto/googleapis/type/latlng"
 )

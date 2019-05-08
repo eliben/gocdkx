@@ -22,11 +22,11 @@ import (
 
 	vkit "cloud.google.com/go/firestore/apiv1"
 	"github.com/golang/protobuf/proto"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/docstore"
-	"gocloud.dev/internal/docstore/driver"
-	"gocloud.dev/internal/docstore/drivertest"
-	"gocloud.dev/internal/testing/setup"
+	"github.com/eliben/gocdkx/gcerrors"
+	"github.com/eliben/gocdkx/internal/docstore"
+	"github.com/eliben/gocdkx/internal/docstore/driver"
+	"github.com/eliben/gocdkx/internal/docstore/drivertest"
+	"github.com/eliben/gocdkx/internal/testing/setup"
 	"google.golang.org/api/option"
 	pb "google.golang.org/genproto/googleapis/firestore/v1"
 )

@@ -18,9 +18,9 @@ import (
 	"context"
 	"log"
 
-	"gocloud.dev/gcp"
-	"gocloud.dev/gcp/cloudsql"
-	"gocloud.dev/mysql/cloudmysql"
+	"github.com/eliben/gocdkx/gcp"
+	"github.com/eliben/gocdkx/gcp/cloudsql"
+	"github.com/eliben/gocdkx/mysql/cloudmysql"
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/google"
 )

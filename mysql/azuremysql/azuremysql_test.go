@@ -23,8 +23,8 @@ import (
 	"context"
 	"testing"
 
-	"gocloud.dev/azure/azuredb"
-	"gocloud.dev/internal/testing/terraform"
+	"github.com/eliben/gocdkx/azure/azuredb"
+	"github.com/eliben/gocdkx/internal/testing/terraform"
 )
 
 func TestOpen(t *testing.T) {

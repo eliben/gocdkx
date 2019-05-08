@@ -8,9 +8,9 @@ import (
 	"net/http"
 	"os"
 
-	"gocloud.dev/blob"
-	_ "gocloud.dev/blob/fileblob"
-	_ "gocloud.dev/blob/memblob"
+	"github.com/eliben/gocdkx/blob"
+	_ "github.com/eliben/gocdkx/blob/fileblob"
+	_ "github.com/eliben/gocdkx/blob/memblob"
 )
 
 // TODO(rvangent): This file is user-visible, add many comments explaining
@@ -64,7 +64,7 @@ const blobBucketBaseTemplate = `
     can be configured via the environment variable "BLOB_BUCKET_URL".
   </p>
   <p>
-    See <a href="https://gocloud.dev/concepts/urls/">here</a> for more
+    See <a href="https://github.com/eliben/gocdkx/concepts/urls/">here</a> for more
     information about URLs in Go CDK APIs.
   </p>
   <ul>

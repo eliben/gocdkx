@@ -20,7 +20,7 @@ import (
 
 	"go.opencensus.io/stats/view"
 	"go.opencensus.io/trace"
-	"gocloud.dev/gcerrors"
+	"github.com/eliben/gocdkx/gcerrors"
 )
 
 // Call holds the expected contents of a measured call.

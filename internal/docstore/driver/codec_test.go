@@ -24,8 +24,8 @@ import (
 	"github.com/golang/protobuf/proto"
 	tspb "github.com/golang/protobuf/ptypes/timestamp"
 	"github.com/google/go-cmp/cmp"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/gcerr"
+	"github.com/eliben/gocdkx/gcerrors"
+	"github.com/eliben/gocdkx/internal/gcerr"
 )
 
 type myString string

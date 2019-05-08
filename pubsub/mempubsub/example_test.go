@@ -19,12 +19,12 @@ import (
 	"log"
 	"time"
 
-	"gocloud.dev/pubsub"
-	"gocloud.dev/pubsub/mempubsub"
+	"github.com/eliben/gocdkx/pubsub"
+	"github.com/eliben/gocdkx/pubsub/mempubsub"
 )
 
 func ExampleNewSubscription() {
-	// This example is used in https://gocloud.dev/howto/pubsub/subscribe/#mem-ctor
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/subscribe/#mem-ctor
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -39,7 +39,7 @@ func ExampleNewSubscription() {
 }
 
 func ExampleNewTopic() {
-	// This example is used in https://gocloud.dev/howto/pubsub/publish/#mem-ctor
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/publish/#mem-ctor
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -49,9 +49,9 @@ func ExampleNewTopic() {
 }
 
 func Example_openSubscription() {
-	// This example is used in https://gocloud.dev/howto/pubsub/subscribe/#mem
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/subscribe/#mem
 
-	// import _ "gocloud.dev/pubsub/mempubsub"
+	// import _ "github.com/eliben/gocdkx/pubsub/mempubsub"
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -72,9 +72,9 @@ func Example_openSubscription() {
 }
 
 func Example_openTopic() {
-	// This example is used in https://gocloud.dev/howto/pubsub/publish/#mem
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/publish/#mem
 
-	// import _ "gocloud.dev/pubsub/mempubsub"
+	// import _ "github.com/eliben/gocdkx/pubsub/mempubsub"
 
 	// Variables set up elsewhere:
 	ctx := context.Background()

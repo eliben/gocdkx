@@ -21,10 +21,10 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"gocloud.dev/internal/testing/setup"
-	"gocloud.dev/pubsub"
-	"gocloud.dev/pubsub/driver"
-	"gocloud.dev/pubsub/drivertest"
+	"github.com/eliben/gocdkx/internal/testing/setup"
+	"github.com/eliben/gocdkx/pubsub"
+	"github.com/eliben/gocdkx/pubsub/driver"
+	"github.com/eliben/gocdkx/pubsub/drivertest"
 
 	common "github.com/Azure/azure-amqp-common-go"
 	servicebus "github.com/Azure/azure-service-bus-go"
@@ -149,7 +149,7 @@ func (h *harness) Close() {
 func (h *harness) MaxBatchSizes() (int, int) { return sendBatcherOpts.MaxBatchSize, 0 }
 
 // Please run the TestConformance with an extended timeout since each test needs to perform CRUD for ServiceBus Topics and Subscriptions.
-// Example: C:\Go\bin\go.exe test -timeout 60s gocloud.dev/pubsub/azuresb -run ^TestConformance$
+// Example: C:\Go\bin\go.exe test -timeout 60s github.com/eliben/gocdkx/pubsub/azuresb -run ^TestConformance$
 func TestConformance(t *testing.T) {
 	if !*setup.Record {
 		t.Skip("replaying is not yet supported for Azure pubsub")

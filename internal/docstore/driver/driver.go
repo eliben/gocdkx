@@ -14,12 +14,12 @@
 
 // Package driver defines a set of interfaces that the docstore package uses to
 // interact with the underlying services.
-package driver // import "gocloud.dev/internal/docstore/driver"
+package driver // import "github.com/eliben/gocdkx/internal/docstore/driver"
 
 import (
 	"context"
 
-	"gocloud.dev/internal/gcerr"
+	"github.com/eliben/gocdkx/internal/gcerr"
 )
 
 // A Collection is a set of documents.
@@ -51,7 +51,7 @@ type Collection interface {
 	QueryPlan(*Query) (string, error)
 
 	// As converts i to provider-specific types.
-	// See https://godoc.org/gocloud.dev#hdr-As for background information.
+	// See https://godoc.org/github.com/eliben/gocdkx#hdr-As for background information.
 	As(i interface{}) bool
 
 	// ErrorCode should return a code that describes the error, which was returned by
@@ -170,7 +170,7 @@ type DocumentIterator interface {
 	Stop()
 
 	// As converts i to provider-specific types.
-	// See https://godoc.org/gocloud.dev#hdr-As for background information.
+	// See https://godoc.org/github.com/eliben/gocdkx#hdr-As for background information.
 	As(i interface{}) bool
 }
 

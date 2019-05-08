@@ -18,12 +18,12 @@ import (
 	"context"
 	"log"
 
-	"gocloud.dev/pubsub"
-	"gocloud.dev/pubsub/kafkapubsub"
+	"github.com/eliben/gocdkx/pubsub"
+	"github.com/eliben/gocdkx/pubsub/kafkapubsub"
 )
 
 func ExampleOpenTopic() {
-	// This example is used in https://gocloud.dev/howto/pubsub/publish/#kafka-ctor
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/publish/#kafka-ctor
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -42,7 +42,7 @@ func ExampleOpenTopic() {
 }
 
 func ExampleOpenSubscription() {
-	// This example is used in https://gocloud.dev/howto/pubsub/subscribe/#kafka-ctor
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/subscribe/#kafka-ctor
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -63,9 +63,9 @@ func ExampleOpenSubscription() {
 }
 
 func Example_openTopic() {
-	// This example is used in https://gocloud.dev/howto/pubsub/publish/#kafka
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/publish/#kafka
 
-	// import _ "gocloud.dev/pubsub/kafkapubsub"
+	// import _ "github.com/eliben/gocdkx/pubsub/kafkapubsub"
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -81,9 +81,9 @@ func Example_openTopic() {
 }
 
 func Example_openSubscription() {
-	// This example is used in https://gocloud.dev/howto/pubsub/subscribe/#kafka
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/subscribe/#kafka
 
-	// import _ "gocloud.dev/pubsub/kafkapubsub"
+	// import _ "github.com/eliben/gocdkx/pubsub/kafkapubsub"
 
 	// Variables set up elsewhere:
 	ctx := context.Background()

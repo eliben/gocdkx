@@ -24,7 +24,7 @@
 // https://docs.aws.amazon.com/sdk-for-go/api/aws/session/ for more details.
 // To customize the URL opener, or for more details on the URL format, see
 // URLOpener.
-// See https://gocloud.dev/concepts/urls/ for background information.
+// See https://github.com/eliben/gocdkx/concepts/urls/ for background information.
 //
 // As
 //
@@ -49,11 +49,11 @@ import (
 	"github.com/aws/aws-sdk-go/aws/session"
 	dyn "github.com/aws/aws-sdk-go/service/dynamodb"
 	"github.com/aws/aws-sdk-go/service/dynamodb/expression"
-	gcaws "gocloud.dev/aws"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/docstore"
-	"gocloud.dev/internal/docstore/driver"
-	"gocloud.dev/internal/gcerr"
+	gcaws "github.com/eliben/gocdkx/aws"
+	"github.com/eliben/gocdkx/gcerrors"
+	"github.com/eliben/gocdkx/internal/docstore"
+	"github.com/eliben/gocdkx/internal/docstore/driver"
+	"github.com/eliben/gocdkx/internal/gcerr"
 )
 
 func init() {
@@ -99,7 +99,7 @@ const Scheme = "dynamodb"
 //   - partition_key (required): the path to the partition key of a table or an index.
 //   - sort_key: the path to the sort key of a table or an index.
 //
-// See https://godoc.org/gocloud.dev/aws#ConfigFromURLParams for supported query
+// See https://godoc.org/github.com/eliben/gocdkx/aws#ConfigFromURLParams for supported query
 // parameters for overriding the aws.Session from the URL.
 type URLOpener struct {
 	// ConfigProvider must be set to a non-nil value.

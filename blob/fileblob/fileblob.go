@@ -20,7 +20,7 @@
 // For blob.OpenBucket, fileblob registers for the scheme "file".
 // To customize the URL opener, or for more details on the URL format,
 // see URLOpener.
-// See https://gocloud.dev/concepts/urls/ for background information.
+// See https://github.com/eliben/gocdkx/concepts/urls/ for background information.
 //
 // Escaping
 //
@@ -37,7 +37,7 @@
 //
 // fileblob exposes the following types for As:
 //  - Error: *os.PathError
-package fileblob // import "gocloud.dev/blob/fileblob"
+package fileblob // import "github.com/eliben/gocdkx/blob/fileblob"
 
 import (
 	"context"
@@ -57,10 +57,10 @@ import (
 	"strings"
 	"time"
 
-	"gocloud.dev/blob"
-	"gocloud.dev/blob/driver"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/escape"
+	"github.com/eliben/gocdkx/blob"
+	"github.com/eliben/gocdkx/blob/driver"
+	"github.com/eliben/gocdkx/gcerrors"
+	"github.com/eliben/gocdkx/internal/escape"
 )
 
 const defaultPageSize = 1000

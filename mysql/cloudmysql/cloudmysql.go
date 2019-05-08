@@ -13,7 +13,7 @@
 // limitations under the License.
 
 // Package cloudmysql provides connections to managed MySQL Cloud SQL instances.
-package cloudmysql // import "gocloud.dev/mysql/cloudmysql"
+package cloudmysql // import "github.com/eliben/gocdkx/mysql/cloudmysql"
 
 import (
 	"context"
@@ -26,8 +26,8 @@ import (
 	"github.com/GoogleCloudPlatform/cloudsql-proxy/proxy/certs"
 	"github.com/GoogleCloudPlatform/cloudsql-proxy/proxy/proxy"
 	"github.com/go-sql-driver/mysql"
-	"gocloud.dev/gcp"
-	"gocloud.dev/gcp/cloudsql"
+	"github.com/eliben/gocdkx/gcp"
+	"github.com/eliben/gocdkx/gcp/cloudsql"
 
 	// mysql enables use of the MySQL dialer for the Cloud SQL Proxy.
 	_ "github.com/GoogleCloudPlatform/cloudsql-proxy/proxy/dialers/mysql"
@@ -86,7 +86,7 @@ func Open(ctx context.Context, certSource proxy.CertSource, params *Params) (*sq
 		Port:  3307,
 		Certs: certSource,
 	}
-	dialerName := fmt.Sprintf("gocloud.dev/mysql/gcpmysql/%d", dialerNum)
+	dialerName := fmt.Sprintf("github.com/eliben/gocdkx/mysql/gcpmysql/%d", dialerNum)
 	mysql.RegisterDial(dialerName, client.Dial)
 
 	cfg := &mysql.Config{

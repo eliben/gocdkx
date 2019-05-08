@@ -39,7 +39,7 @@
 // return a value without blocking.
 //
 // Alternatively, you can construct a *Variable via a URL and OpenVariable.
-// See https://gocloud.dev/concepts/urls/ for more information.
+// See https://github.com/eliben/gocdkx/concepts/urls/ for more information.
 //
 //
 // OpenCensus Integration
@@ -47,12 +47,12 @@
 // OpenCensus supports tracing and metric collection for multiple languages and
 // backend providers. See https://opencensus.io.
 //
-// This API collects an OpenCensus metric "gocloud.dev/runtimevar/value_changes",
+// This API collects an OpenCensus metric "github.com/eliben/gocdkx/runtimevar/value_changes",
 // a count of the number of times all variables have changed values, by provider.
 //
 // To enable metric collection in your application, see "Exporting stats" at
 // https://opencensus.io/quickstart/go/metrics.
-package runtimevar // import "gocloud.dev/runtimevar"
+package runtimevar // import "github.com/eliben/gocdkx/runtimevar"
 
 import (
 	"bytes"
@@ -71,11 +71,11 @@ import (
 	"go.opencensus.io/stats"
 	"go.opencensus.io/stats/view"
 	"go.opencensus.io/tag"
-	"gocloud.dev/internal/gcerr"
-	"gocloud.dev/internal/oc"
-	"gocloud.dev/internal/openurl"
-	"gocloud.dev/runtimevar/driver"
-	"gocloud.dev/secrets"
+	"github.com/eliben/gocdkx/internal/gcerr"
+	"github.com/eliben/gocdkx/internal/oc"
+	"github.com/eliben/gocdkx/internal/openurl"
+	"github.com/eliben/gocdkx/runtimevar/driver"
+	"github.com/eliben/gocdkx/secrets"
 )
 
 // Snapshot contains a snapshot of a variable's value and metadata about it.
@@ -93,7 +93,7 @@ type Snapshot struct {
 }
 
 // As converts i to provider-specific types.
-// See https://godoc.org/gocloud.dev#hdr-As for background information, the "As"
+// See https://godoc.org/github.com/eliben/gocdkx#hdr-As for background information, the "As"
 // examples in this package for examples, and the provider-specific package
 // documentation for the specific types supported for that provider.
 func (s *Snapshot) As(i interface{}) bool {
@@ -103,7 +103,7 @@ func (s *Snapshot) As(i interface{}) bool {
 	return s.asFunc(i)
 }
 
-const pkgName = "gocloud.dev/runtimevar"
+const pkgName = "github.com/eliben/gocdkx/runtimevar"
 
 var (
 	changeMeasure = stats.Int64(pkgName+"/value_changes", "Count of variable value changes",
@@ -348,7 +348,7 @@ func wrapError(w driver.Watcher, err error) error {
 // ErrorAs converts err to provider-specific types.
 // ErrorAs panics if i is nil or not a pointer.
 // ErrorAs returns false if err == nil.
-// See https://godoc.org/gocloud.dev#hdr-As for background information.
+// See https://godoc.org/github.com/eliben/gocdkx#hdr-As for background information.
 func (c *Variable) ErrorAs(err error, i interface{}) bool {
 	return gcerr.ErrorAs(err, i, c.dw.ErrorAs)
 }
@@ -365,7 +365,7 @@ type VariableURLOpener interface {
 // URLMux is a URL opener multiplexer. It matches the scheme of the URLs
 // against a set of registered schemes and calls the opener that matches the
 // URL's scheme.
-// See https://gocloud.dev/concepts/urls/ for more information.
+// See https://github.com/eliben/gocdkx/concepts/urls/ for more information.
 //
 // The zero value is a multiplexer with no registered schemes.
 type URLMux struct {
@@ -415,7 +415,7 @@ func DefaultURLMux() *URLMux {
 
 // OpenVariable opens the variable identified by the URL given.
 // See the URLOpener documentation in provider-specific subpackages for
-// details on supported URL formats, and https://gocloud.dev/concepts/urls
+// details on supported URL formats, and https://github.com/eliben/gocdkx/concepts/urls
 // for more information.
 func OpenVariable(ctx context.Context, urlstr string) (*Variable, error) {
 	return defaultURLMux.OpenVariable(ctx, urlstr)
@@ -493,7 +493,7 @@ func BytesDecode(ctx context.Context, b []byte, obj interface{}) error {
 }
 
 // DecryptDecode returns a decode function that can be passed to NewDecoder when
-// decoding an encrypted message (https://godoc.org/gocloud.dev/secrets).
+// decoding an encrypted message (https://godoc.org/github.com/eliben/gocdkx/secrets).
 //
 // post defaults to BytesDecode. An optional decoder can be passed in to do
 // further decode operation based on the decrypted message.
@@ -525,7 +525,7 @@ func DecryptDecode(k *secrets.Keeper, post Decode) Decode {
 // It also supports using "decrypt+<decoderName>" (or "decrypt" for default
 // decoder) to decrypt the data before decoding. It uses the secrets package to
 // open a keeper by the URL string stored in a environment variable
-// "RUNTIMEVAR_KEEPER_URL". See https://godoc.org/gocloud.dev/secrets#OpenKeeper
+// "RUNTIMEVAR_KEEPER_URL". See https://godoc.org/github.com/eliben/gocdkx/secrets#OpenKeeper
 // for more details.
 func DecoderByName(ctx context.Context, decoderName string, dflt *Decoder) (*Decoder, error) {
 	// Open a *secrets.Keeper if the decoderName contains "decrypt".

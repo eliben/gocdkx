@@ -27,12 +27,12 @@ import (
 
 	"cloud.google.com/go/storage"
 	"github.com/google/go-cmp/cmp"
-	"gocloud.dev/blob"
-	"gocloud.dev/blob/driver"
-	"gocloud.dev/blob/drivertest"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/gcp"
-	"gocloud.dev/internal/testing/setup"
+	"github.com/eliben/gocdkx/blob"
+	"github.com/eliben/gocdkx/blob/driver"
+	"github.com/eliben/gocdkx/blob/drivertest"
+	"github.com/eliben/gocdkx/gcerrors"
+	"github.com/eliben/gocdkx/gcp"
+	"github.com/eliben/gocdkx/internal/testing/setup"
 	"google.golang.org/api/googleapi"
 )
 

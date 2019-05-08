@@ -27,9 +27,9 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
-	"gocloud.dev/internal/docstore"
-	"gocloud.dev/internal/docstore/driver"
-	"gocloud.dev/internal/docstore/drivertest"
+	"github.com/eliben/gocdkx/internal/docstore"
+	"github.com/eliben/gocdkx/internal/docstore/driver"
+	"github.com/eliben/gocdkx/internal/docstore/drivertest"
 )
 
 const (

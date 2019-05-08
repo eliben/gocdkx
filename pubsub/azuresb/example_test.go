@@ -20,12 +20,12 @@ import (
 	"os"
 
 	servicebus "github.com/Azure/azure-service-bus-go"
-	"gocloud.dev/pubsub"
-	"gocloud.dev/pubsub/azuresb"
+	"github.com/eliben/gocdkx/pubsub"
+	"github.com/eliben/gocdkx/pubsub/azuresb"
 )
 
 func ExampleOpenTopic() {
-	// This example is used in https://gocloud.dev/howto/pubsub/publish/#azure-ctor
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/publish/#azure-ctor
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -58,9 +58,9 @@ func ExampleOpenTopic() {
 }
 
 func Example_openTopic() {
-	// This example is used in https://gocloud.dev/howto/pubsub/publish/#azure
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/publish/#azure
 
-	// import _ "gocloud.dev/pubsub/azuresb"
+	// import _ "github.com/eliben/gocdkx/pubsub/azuresb"
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -76,7 +76,7 @@ func Example_openTopic() {
 }
 
 func ExampleOpenSubscription() {
-	// This example is used in https://gocloud.dev/howto/pubsub/subscribe/#azure-ctor
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/subscribe/#azure-ctor
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -112,9 +112,9 @@ func ExampleOpenSubscription() {
 }
 
 func Example_openSubscription() {
-	// This example is used in https://gocloud.dev/howto/pubsub/subscribe/#azure
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/subscribe/#azure
 
-	// import _ "gocloud.dev/pubsub/azuresb"
+	// import _ "github.com/eliben/gocdkx/pubsub/azuresb"
 
 	// Variables set up elsewhere:
 	ctx := context.Background()

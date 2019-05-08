@@ -24,8 +24,8 @@
 // To customize the URL opener, or for more details on the URL format,
 // see URLOpener.
 //
-// See https://gocloud.dev/concepts/urls/ for background information.
-package cloudpostgres // import "gocloud.dev/postgres/cloudpostgres"
+// See https://github.com/eliben/gocdkx/concepts/urls/ for background information.
+package cloudpostgres // import "github.com/eliben/gocdkx/postgres/cloudpostgres"
 
 import (
 	"context"
@@ -42,9 +42,9 @@ import (
 	"contrib.go.opencensus.io/integrations/ocsql"
 	"github.com/GoogleCloudPlatform/cloudsql-proxy/proxy/proxy"
 	"github.com/lib/pq"
-	"gocloud.dev/gcp"
-	"gocloud.dev/gcp/cloudsql"
-	"gocloud.dev/postgres"
+	"github.com/eliben/gocdkx/gcp"
+	"github.com/eliben/gocdkx/gcp/cloudsql"
+	"github.com/eliben/gocdkx/postgres"
 )
 
 // Scheme is the URL scheme cloudpostgres registers its URLOpener under on

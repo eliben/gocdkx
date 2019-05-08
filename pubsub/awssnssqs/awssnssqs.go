@@ -24,13 +24,13 @@
 // for more details.
 // To customize the URL opener, or for more details on the URL format,
 // see URLOpener.
-// See https://gocloud.dev/concepts/urls/ for background information.
+// See https://github.com/eliben/gocdkx/concepts/urls/ for background information.
 //
 // Message Delivery Semantics
 //
 // AWS SNS and SQS combine to support at-least-once semantics; applications must
 // call Message.Ack after processing a message, or it will be redelivered.
-// See https://godoc.org/gocloud.dev/pubsub#hdr-At_most_once_and_At_least_once_Delivery
+// See https://godoc.org/github.com/eliben/gocdkx/pubsub#hdr-At_most_once_and_At_least_once_Delivery
 // for more background.
 //
 // Escaping
@@ -56,7 +56,7 @@
 //  - Message: *sqs.Message
 //  - Message.BeforeSend: *sns.PublishInput
 //  - Error: awserror.Error
-package awssnssqs // import "gocloud.dev/pubsub/awssnssqs"
+package awssnssqs // import "github.com/eliben/gocdkx/pubsub/awssnssqs"
 
 import (
 	"context"
@@ -77,13 +77,13 @@ import (
 	"github.com/aws/aws-sdk-go/service/sns"
 	"github.com/aws/aws-sdk-go/service/sqs"
 	"github.com/google/wire"
-	gcaws "gocloud.dev/aws"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/batcher"
-	"gocloud.dev/internal/escape"
-	"gocloud.dev/internal/gcerr"
-	"gocloud.dev/pubsub"
-	"gocloud.dev/pubsub/driver"
+	gcaws "github.com/eliben/gocdkx/aws"
+	"github.com/eliben/gocdkx/gcerrors"
+	"github.com/eliben/gocdkx/internal/batcher"
+	"github.com/eliben/gocdkx/internal/escape"
+	"github.com/eliben/gocdkx/internal/gcerr"
+	"github.com/eliben/gocdkx/pubsub"
+	"github.com/eliben/gocdkx/pubsub/driver"
 )
 
 const (
@@ -181,7 +181,7 @@ const SQSScheme = "awssqs"
 // For subscriptions, the URL's host+path is prefixed with "https://" to create
 // the queue URL.
 //
-// See gocloud.dev/aws/ConfigFromURLParams for supported query parameters
+// See github.com/eliben/gocdkx/aws/ConfigFromURLParams for supported query parameters
 // that affect the default AWS session.
 type URLOpener struct {
 	// ConfigProvider configures the connection to AWS.

@@ -13,19 +13,19 @@
 // limitations under the License.
 
 // Package awscloud contains Wire providers for AWS services.
-package awscloud // import "gocloud.dev/aws/awscloud"
+package awscloud // import "github.com/eliben/gocdkx/aws/awscloud"
 
 import (
 	"net/http"
 
 	"github.com/google/wire"
-	"gocloud.dev/aws"
-	"gocloud.dev/aws/rds"
-	"gocloud.dev/blob/s3blob"
-	"gocloud.dev/pubsub/awssnssqs"
-	"gocloud.dev/runtimevar/awsparamstore"
-	"gocloud.dev/secrets/awskms"
-	"gocloud.dev/server/xrayserver"
+	"github.com/eliben/gocdkx/aws"
+	"github.com/eliben/gocdkx/aws/rds"
+	"github.com/eliben/gocdkx/blob/s3blob"
+	"github.com/eliben/gocdkx/pubsub/awssnssqs"
+	"github.com/eliben/gocdkx/runtimevar/awsparamstore"
+	"github.com/eliben/gocdkx/secrets/awskms"
+	"github.com/eliben/gocdkx/server/xrayserver"
 )
 
 // AWS is a Wire provider set that includes all Amazon Web Services interface

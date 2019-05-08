@@ -14,7 +14,7 @@
 
 // Package drivertest provides a conformance test for implementations of
 // driver.
-package drivertest // import "gocloud.dev/internal/docstore/drivertest"
+package drivertest // import "github.com/eliben/gocdkx/internal/docstore/drivertest"
 
 import (
 	"context"
@@ -27,10 +27,10 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/docstore"
-	ds "gocloud.dev/internal/docstore"
-	"gocloud.dev/internal/docstore/driver"
+	"github.com/eliben/gocdkx/gcerrors"
+	"github.com/eliben/gocdkx/internal/docstore"
+	ds "github.com/eliben/gocdkx/internal/docstore"
+	"github.com/eliben/gocdkx/internal/docstore/driver"
 )
 
 // TODO(jba): Test RunActions with unordered=true. We can't actually test the ordering,

@@ -23,7 +23,7 @@
 // https://cloud.google.com/docs/authentication/production.
 // To customize the URL opener, or for more details on the URL format,
 // see URLOpener.
-// See https://gocloud.dev/concepts/urls/ for background information.
+// See https://github.com/eliben/gocdkx/concepts/urls/ for background information.
 //
 // Escaping
 //
@@ -45,7 +45,7 @@
 //  - Attributes: storage.ObjectAttrs
 //  - CopyOptions.BeforeCopy: *CopyObjectHandles, *storage.Copier
 //  - WriterOptions.BeforeWrite: **storage.ObjectHandle, *storage.Writer
-package gcsblob // import "gocloud.dev/blob/gcsblob"
+package gcsblob // import "github.com/eliben/gocdkx/blob/gcsblob"
 
 import (
 	"context"
@@ -62,12 +62,12 @@ import (
 
 	"cloud.google.com/go/storage"
 	"github.com/google/wire"
-	"gocloud.dev/blob"
-	"gocloud.dev/blob/driver"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/gcp"
-	"gocloud.dev/internal/escape"
-	"gocloud.dev/internal/useragent"
+	"github.com/eliben/gocdkx/blob"
+	"github.com/eliben/gocdkx/blob/driver"
+	"github.com/eliben/gocdkx/gcerrors"
+	"github.com/eliben/gocdkx/gcp"
+	"github.com/eliben/gocdkx/internal/escape"
+	"github.com/eliben/gocdkx/internal/useragent"
 	"google.golang.org/api/googleapi"
 	"google.golang.org/api/iterator"
 	"google.golang.org/api/option"

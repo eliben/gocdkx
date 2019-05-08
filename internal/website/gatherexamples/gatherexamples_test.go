@@ -312,7 +312,7 @@ func TestFormatImports(t *testing.T) {
 				"fmt":                          "",
 				"log":                          "",
 				"github.com/google/go-cmp/cmp": "",
-				"gocloud.dev/blob":             "",
+				"github.com/eliben/gocdkx/blob":             "",
 			},
 			want: "import (\n" +
 				"\t\"context\"\n" +
@@ -320,7 +320,7 @@ func TestFormatImports(t *testing.T) {
 				"\t\"log\"\n" +
 				"\n" +
 				"\t\"github.com/google/go-cmp/cmp\"\n" +
-				"\t\"gocloud.dev/blob\"\n" +
+				"\t\"github.com/eliben/gocdkx/blob\"\n" +
 				")",
 		},
 	}

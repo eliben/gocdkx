@@ -25,13 +25,13 @@
 // https://cloud.google.com/docs/authentication/production.
 // To customize the URL opener, or for more details on the URL format,
 // see URLOpener.
-// See https://gocloud.dev/concepts/urls/ for background information.
+// See https://github.com/eliben/gocdkx/concepts/urls/ for background information.
 //
 // Message Delivery Semantics
 //
 // GCP Pub/Sub supports at-least-once semantics; applications must
 // call Message.Ack after processing a message, or it will be redelivered.
-// See https://godoc.org/gocloud.dev/pubsub#hdr-At_most_once_and_At_least_once_Delivery
+// See https://godoc.org/github.com/eliben/gocdkx/pubsub#hdr-At_most_once_and_At_least_once_Delivery
 // for more background.
 //
 // As
@@ -42,7 +42,7 @@
 //  - Message.BeforeSend: *pb.PubsubMessage
 //  - Message: *pb.PubsubMessage
 //  - Error: *google.golang.org/grpc/status.Status
-package gcppubsub // import "gocloud.dev/pubsub/gcppubsub"
+package gcppubsub // import "github.com/eliben/gocdkx/pubsub/gcppubsub"
 
 import (
 	"context"
@@ -54,13 +54,13 @@ import (
 
 	raw "cloud.google.com/go/pubsub/apiv1"
 	"github.com/google/wire"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/gcp"
-	"gocloud.dev/internal/batcher"
-	"gocloud.dev/internal/gcerr"
-	"gocloud.dev/internal/useragent"
-	"gocloud.dev/pubsub"
-	"gocloud.dev/pubsub/driver"
+	"github.com/eliben/gocdkx/gcerrors"
+	"github.com/eliben/gocdkx/gcp"
+	"github.com/eliben/gocdkx/internal/batcher"
+	"github.com/eliben/gocdkx/internal/gcerr"
+	"github.com/eliben/gocdkx/internal/useragent"
+	"github.com/eliben/gocdkx/pubsub"
+	"github.com/eliben/gocdkx/pubsub/driver"
 	"google.golang.org/api/option"
 	pb "google.golang.org/genproto/googleapis/pubsub/v1"
 	"google.golang.org/grpc"

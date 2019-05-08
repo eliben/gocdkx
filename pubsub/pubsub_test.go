@@ -25,12 +25,12 @@ import (
 	"time"
 
 	"github.com/google/go-cmp/cmp"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/gcerr"
-	"gocloud.dev/internal/testing/octest"
-	"gocloud.dev/pubsub"
-	"gocloud.dev/pubsub/driver"
-	"gocloud.dev/pubsub/mempubsub"
+	"github.com/eliben/gocdkx/gcerrors"
+	"github.com/eliben/gocdkx/internal/gcerr"
+	"github.com/eliben/gocdkx/internal/testing/octest"
+	"github.com/eliben/gocdkx/pubsub"
+	"github.com/eliben/gocdkx/pubsub/driver"
+	"github.com/eliben/gocdkx/pubsub/mempubsub"
 	"golang.org/x/sync/errgroup"
 )
 
@@ -443,7 +443,7 @@ func TestOpenCensus(t *testing.T) {
 	}
 	_, _ = sub.Receive(ctx)
 
-	diff := octest.Diff(te.Spans(), te.Counts(), "gocloud.dev/pubsub", "gocloud.dev/pubsub/mempubsub", []octest.Call{
+	diff := octest.Diff(te.Spans(), te.Counts(), "github.com/eliben/gocdkx/pubsub", "gocloud.dev/pubsub/mempubsub", []octest.Call{
 		{Method: "driver.Topic.SendBatch", Code: gcerrors.OK},
 		{Method: "Topic.Send", Code: gcerrors.OK},
 		{Method: "Topic.Shutdown", Code: gcerrors.OK},

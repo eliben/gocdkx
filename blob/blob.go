@@ -14,7 +14,7 @@
 
 // Package blob provides an easy and portable way to interact with blobs
 // within a storage location, hereafter called a "bucket". See
-// https://gocloud.dev/howto/blob/ for how-to guides.
+// https://github.com/eliben/gocdkx/howto/blob/ for how-to guides.
 //
 // It supports operations like reading and writing blobs (using standard
 // interfaces from the io package), deleting blobs, and listing blobs in a
@@ -40,14 +40,14 @@
 // for managing your initialization code.
 //
 // Alternatively, you can construct a *Bucket via a URL and OpenBucket.
-// See https://gocloud.dev/concepts/urls/ for more information.
+// See https://github.com/eliben/gocdkx/concepts/urls/ for more information.
 //
 //
 // Errors
 //
 // The errors returned from this package can be inspected in several ways:
 //
-// The Code function from gocloud.dev/gcerrors will return an error code, also
+// The Code function from github.com/eliben/gocdkx/gcerrors will return an error code, also
 // defined in that package, when invoked on an error.
 //
 // The Bucket.ErrorAs method can retrieve the driver error underlying the returned
@@ -68,21 +68,21 @@
 //  - NewWriter, from creation until the call to Close.
 // All trace and metric names begin with the package import path.
 // The traces add the method name.
-// For example, "gocloud.dev/blob/Attributes".
+// For example, "github.com/eliben/gocdkx/blob/Attributes".
 // The metrics are "completed_calls", a count of completed method calls by provider,
 // method and status (error code); and "latency", a distribution of method latency
 // by provider and method.
-// For example, "gocloud.dev/blob/latency".
+// For example, "github.com/eliben/gocdkx/blob/latency".
 //
 // It also collects the following metrics:
-// - gocloud.dev/blob/bytes_read: the total number of bytes read, by provider.
-// - gocloud.dev/blob/bytes_written: the total number of bytes written, by provider.
+// - github.com/eliben/gocdkx/blob/bytes_read: the total number of bytes read, by provider.
+// - github.com/eliben/gocdkx/blob/bytes_written: the total number of bytes written, by provider.
 //
 // To enable trace collection in your application, see "Configure Exporter" at
 // https://opencensus.io/quickstart/go/tracing.
 // To enable metric collection in your application, see "Exporting stats" at
 // https://opencensus.io/quickstart/go/metrics.
-package blob // import "gocloud.dev/blob"
+package blob // import "github.com/eliben/gocdkx/blob"
 
 import (
 	"bytes"
@@ -105,11 +105,11 @@ import (
 	"go.opencensus.io/stats"
 	"go.opencensus.io/stats/view"
 	"go.opencensus.io/tag"
-	"gocloud.dev/blob/driver"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/gcerr"
-	"gocloud.dev/internal/oc"
-	"gocloud.dev/internal/openurl"
+	"github.com/eliben/gocdkx/blob/driver"
+	"github.com/eliben/gocdkx/gcerrors"
+	"github.com/eliben/gocdkx/internal/gcerr"
+	"github.com/eliben/gocdkx/internal/oc"
+	"github.com/eliben/gocdkx/internal/openurl"
 )
 
 // Reader reads bytes from a blob.
@@ -155,7 +155,7 @@ func (r *Reader) Size() int64 {
 }
 
 // As converts i to provider-specific types.
-// See https://godoc.org/gocloud.dev#hdr-As for background information, the "As"
+// See https://godoc.org/github.com/eliben/gocdkx#hdr-As for background information, the "As"
 // examples in this package for examples, and the provider-specific package
 // documentation for the specific types supported for that provider.
 func (r *Reader) As(i interface{}) bool {
@@ -199,7 +199,7 @@ type Attributes struct {
 }
 
 // As converts i to provider-specific types.
-// See https://godoc.org/gocloud.dev#hdr-As for background information, the "As"
+// See https://godoc.org/github.com/eliben/gocdkx#hdr-As for background information, the "As"
 // examples in this package for examples, and the provider-specific package
 // documentation for the specific types supported for that provider.
 func (a *Attributes) As(i interface{}) bool {
@@ -348,7 +348,7 @@ type ListOptions struct {
 	// BeforeList is a callback that will be called before each call to the
 	// the underlying provider's list functionality.
 	// asFunc converts its argument to provider-specific types.
-	// See https://godoc.org/gocloud.dev#hdr-As for background information.
+	// See https://godoc.org/github.com/eliben/gocdkx#hdr-As for background information.
 	BeforeList func(asFunc func(interface{}) bool) error
 }
 
@@ -420,7 +420,7 @@ type ListObject struct {
 }
 
 // As converts i to provider-specific types.
-// See https://godoc.org/gocloud.dev#hdr-As for background information, the "As"
+// See https://godoc.org/github.com/eliben/gocdkx#hdr-As for background information, the "As"
 // examples in this package for examples, and the provider-specific package
 // documentation for the specific types supported for that provider.
 func (o *ListObject) As(i interface{}) bool {
@@ -445,7 +445,7 @@ type Bucket struct {
 	closed bool
 }
 
-const pkgName = "gocloud.dev/blob"
+const pkgName = "github.com/eliben/gocdkx/blob"
 
 var (
 	latencyMeasure      = oc.LatencyMeasure(pkgName)
@@ -492,7 +492,7 @@ func newBucket(b driver.Bucket) *Bucket {
 }
 
 // As converts i to provider-specific types.
-// See https://godoc.org/gocloud.dev#hdr-As for background information, the "As"
+// See https://godoc.org/github.com/eliben/gocdkx#hdr-As for background information, the "As"
 // examples in this package for examples, and the provider-specific package
 // documentation for the specific types supported for that provider.
 func (b *Bucket) As(i interface{}) bool {
@@ -505,7 +505,7 @@ func (b *Bucket) As(i interface{}) bool {
 // ErrorAs converts err to provider-specific types.
 // ErrorAs panics if i is nil or not a pointer.
 // ErrorAs returns false if err == nil.
-// See https://godoc.org/gocloud.dev#hdr-As for background information.
+// See https://godoc.org/github.com/eliben/gocdkx#hdr-As for background information.
 func (b *Bucket) ErrorAs(err error, i interface{}) bool {
 	return gcerr.ErrorAs(err, i, b.b.ErrorAs)
 }
@@ -919,7 +919,7 @@ type ReaderOptions struct {
 	// case it may not be called at all).
 	//
 	// asFunc converts its argument to provider-specific types.
-	// See https://godoc.org/gocloud.dev#hdr-As for background information.
+	// See https://godoc.org/github.com/eliben/gocdkx#hdr-As for background information.
 	BeforeRead func(asFunc func(interface{}) bool) error
 }
 
@@ -980,7 +980,7 @@ type WriterOptions struct {
 	// sending an upload request.
 	//
 	// asFunc converts its argument to provider-specific types.
-	// See https://godoc.org/gocloud.dev#hdr-As for background information.
+	// See https://godoc.org/github.com/eliben/gocdkx#hdr-As for background information.
 	BeforeWrite func(asFunc func(interface{}) bool) error
 }
 
@@ -990,7 +990,7 @@ type CopyOptions struct {
 	// initiated.
 	//
 	// asFunc converts its argument to provider-specific types.
-	// See https://godoc.org/gocloud.dev#hdr-As for background information.
+	// See https://godoc.org/github.com/eliben/gocdkx#hdr-As for background information.
 	BeforeCopy func(asFunc func(interface{}) bool) error
 }
 
@@ -1006,7 +1006,7 @@ type BucketURLOpener interface {
 // URLMux is a URL opener multiplexer. It matches the scheme of the URLs
 // against a set of registered schemes and calls the opener that matches the
 // URL's scheme.
-// See https://gocloud.dev/concepts/urls/ for more information.
+// See https://github.com/eliben/gocdkx/concepts/urls/ for more information.
 //
 // The zero value is a multiplexer with no registered schemes.
 type URLMux struct {
@@ -1056,7 +1056,7 @@ func DefaultURLMux() *URLMux {
 
 // OpenBucket opens the bucket identified by the URL given.
 // See the URLOpener documentation in provider-specific subpackages for
-// details on supported URL formats, and https://gocloud.dev/concepts/urls/
+// details on supported URL formats, and https://github.com/eliben/gocdkx/concepts/urls/
 // for more information.
 func OpenBucket(ctx context.Context, urlstr string) (*Bucket, error) {
 	return defaultURLMux.OpenBucket(ctx, urlstr)

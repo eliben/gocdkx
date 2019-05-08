@@ -14,13 +14,13 @@
 
 // Package driver provides the interface for providers of runtimevar.  This serves as a contract
 // of how the runtimevar API uses a provider implementation.
-package driver // import "gocloud.dev/runtimevar/driver"
+package driver // import "github.com/eliben/gocdkx/runtimevar/driver"
 
 import (
 	"context"
 	"time"
 
-	"gocloud.dev/gcerrors"
+	"github.com/eliben/gocdkx/gcerrors"
 )
 
 // DefaultWaitDuration is the default value for WaitDuration.
@@ -42,7 +42,7 @@ type State interface {
 	UpdateTime() time.Time
 
 	// As converts i to provider-specific types.
-	// See https://godoc.org/gocloud.dev#hdr-As for background information.
+	// See https://godoc.org/github.com/eliben/gocdkx#hdr-As for background information.
 	As(interface{}) bool
 }
 

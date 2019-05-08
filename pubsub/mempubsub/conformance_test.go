@@ -19,8 +19,8 @@ import (
 	"testing"
 	"time"
 
-	"gocloud.dev/pubsub/driver"
-	"gocloud.dev/pubsub/drivertest"
+	"github.com/eliben/gocdkx/pubsub/driver"
+	"github.com/eliben/gocdkx/pubsub/drivertest"
 )
 
 type harness struct{}

@@ -19,8 +19,8 @@ import (
 	"log"
 
 	"go.etcd.io/etcd/clientv3"
-	"gocloud.dev/runtimevar"
-	"gocloud.dev/runtimevar/etcdvar"
+	"github.com/eliben/gocdkx/runtimevar"
+	"github.com/eliben/gocdkx/runtimevar/etcdvar"
 )
 
 // MyConfig is a sample configuration struct.

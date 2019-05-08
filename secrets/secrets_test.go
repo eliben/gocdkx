@@ -23,10 +23,10 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/gcerr"
-	"gocloud.dev/internal/testing/octest"
-	"gocloud.dev/secrets/driver"
+	"github.com/eliben/gocdkx/gcerrors"
+	"github.com/eliben/gocdkx/internal/gcerr"
+	"github.com/eliben/gocdkx/internal/testing/octest"
+	"github.com/eliben/gocdkx/secrets/driver"
 )
 
 var errFake = errors.New("fake")
@@ -101,7 +101,7 @@ func TestOpenCensus(t *testing.T) {
 	defer k.Close()
 	k.Encrypt(ctx, nil)
 	k.Decrypt(ctx, nil)
-	diff := octest.Diff(te.Spans(), te.Counts(), "gocloud.dev/secrets", "gocloud.dev/secrets", []octest.Call{
+	diff := octest.Diff(te.Spans(), te.Counts(), "github.com/eliben/gocdkx/secrets", "gocloud.dev/secrets", []octest.Call{
 		{Method: "Encrypt", Code: gcerrors.Internal},
 		{Method: "Decrypt", Code: gcerrors.Internal},
 	})

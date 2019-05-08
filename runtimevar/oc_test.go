@@ -19,10 +19,10 @@ import (
 	"testing"
 
 	"go.opencensus.io/stats/view"
-	"gocloud.dev/internal/oc"
-	"gocloud.dev/internal/testing/octest"
-	"gocloud.dev/runtimevar"
-	"gocloud.dev/runtimevar/constantvar"
+	"github.com/eliben/gocdkx/internal/oc"
+	"github.com/eliben/gocdkx/internal/testing/octest"
+	"github.com/eliben/gocdkx/runtimevar"
+	"github.com/eliben/gocdkx/runtimevar/constantvar"
 )
 
 func TestOpenCensus(t *testing.T) {
@@ -39,7 +39,7 @@ func TestOpenCensus(t *testing.T) {
 	_, _ = v.Watch(cctx)
 
 	seen := false
-	const provider = "gocloud.dev/runtimevar/constantvar"
+	const provider = "github.com/eliben/gocdkx/runtimevar/constantvar"
 	for _, row := range te.Counts() {
 		if _, ok := row.Data.(*view.CountData); !ok {
 			continue

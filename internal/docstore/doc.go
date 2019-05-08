@@ -90,4 +90,4 @@
 //         }
 //         fmt.Println(m)
 //    }
-package docstore // import "gocloud.dev/internal/docstore"
+package docstore // import "github.com/eliben/gocdkx/internal/docstore"

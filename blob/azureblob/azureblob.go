@@ -23,7 +23,7 @@
 // AZURE_STORAGE_ACCOUNT is required, along with one of the other two.
 // To customize the URL opener, or for more details on the URL format,
 // see URLOpener.
-// See https://gocloud.dev/concepts/urls/ for background information.
+// See https://github.com/eliben/gocdkx/concepts/urls/ for background information.
 //
 // Escaping
 //
@@ -72,12 +72,12 @@ import (
 	"github.com/Azure/azure-storage-blob-go/azblob"
 	"github.com/google/uuid"
 	"github.com/google/wire"
-	"gocloud.dev/blob"
-	"gocloud.dev/blob/driver"
-	"gocloud.dev/gcerrors"
+	"github.com/eliben/gocdkx/blob"
+	"github.com/eliben/gocdkx/blob/driver"
+	"github.com/eliben/gocdkx/gcerrors"
 
-	"gocloud.dev/internal/escape"
-	"gocloud.dev/internal/useragent"
+	"github.com/eliben/gocdkx/internal/escape"
+	"github.com/eliben/gocdkx/internal/useragent"
 )
 
 // Options sets options for constructing a *blob.Bucket backed by Azure Block Blob.

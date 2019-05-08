@@ -14,7 +14,7 @@
 
 // Package azuremysql provides connections to Azure Database for MySQL.
 // See https://docs.microsoft.com/en-us/azure/mysql.
-package azuremysql // import "gocloud.dev/mysql/azuremysql"
+package azuremysql // import "github.com/eliben/gocdkx/mysql/azuremysql"
 
 import (
 	"context"
@@ -26,7 +26,7 @@ import (
 	"contrib.go.opencensus.io/integrations/ocsql"
 	"github.com/go-sql-driver/mysql"
 
-	"gocloud.dev/azure/azuredb"
+	"github.com/eliben/gocdkx/azure/azuredb"
 )
 
 const (
@@ -100,7 +100,7 @@ func (c *connector) Connect(ctx context.Context) (driver.Conn, error) {
 			return nil, fmt.Errorf("connect Azure MySql: %v", err)
 		}
 
-		tlsConfigName := fmt.Sprintf("gocloud.dev/mysql/azuresql/%s", c.params.ServerName)
+		tlsConfigName := fmt.Sprintf("github.com/eliben/gocdkx/mysql/azuresql/%s", c.params.ServerName)
 		err = mysql.RegisterTLSConfig(tlsConfigName, &tls.Config{
 			RootCAs: certPool,
 		})

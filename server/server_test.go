@@ -21,7 +21,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"gocloud.dev/requestlog"
+	"github.com/eliben/gocdkx/requestlog"
 )
 
 func TestListenAndServe(t *testing.T) {

@@ -19,9 +19,9 @@ import (
 	"fmt"
 	"log"
 
-	"gocloud.dev/secrets"
-	_ "gocloud.dev/secrets/gcpkms"
-	"gocloud.dev/secrets/localsecrets"
+	"github.com/eliben/gocdkx/secrets"
+	_ "github.com/eliben/gocdkx/secrets/gcpkms"
+	"github.com/eliben/gocdkx/secrets/localsecrets"
 	"google.golang.org/grpc/status"
 )
 
@@ -60,7 +60,7 @@ func Example_errorAs() {
 	// demonstrates access to the underlying google.golang.org/grpc/status.Status
 	// type.
 	// The types exposed for As by gcpkms are documented in
-	// https://godoc.org/gocloud.dev/secrets/gcpkms#hdr-As
+	// https://godoc.org/github.com/eliben/gocdkx/secrets/gcpkms#hdr-As
 	ctx := context.Background()
 
 	const url = "gcpkms://projects/proj/locations/global/keyRings/test/ring/wrongkey"

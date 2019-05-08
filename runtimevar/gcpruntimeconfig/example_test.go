@@ -18,9 +18,9 @@ import (
 	"context"
 	"log"
 
-	"gocloud.dev/gcp"
-	"gocloud.dev/runtimevar"
-	"gocloud.dev/runtimevar/gcpruntimeconfig"
+	"github.com/eliben/gocdkx/gcp"
+	"github.com/eliben/gocdkx/runtimevar"
+	"github.com/eliben/gocdkx/runtimevar/gcpruntimeconfig"
 )
 
 // MyConfig is a sample configuration struct.

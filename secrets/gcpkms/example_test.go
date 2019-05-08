@@ -18,8 +18,8 @@ import (
 	"context"
 	"log"
 
-	"gocloud.dev/secrets"
-	"gocloud.dev/secrets/gcpkms"
+	"github.com/eliben/gocdkx/secrets"
+	"github.com/eliben/gocdkx/secrets/gcpkms"
 )
 
 func Example() {

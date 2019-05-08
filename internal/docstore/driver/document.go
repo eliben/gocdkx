@@ -17,9 +17,9 @@ package driver
 import (
 	"reflect"
 
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/docstore/internal/fields"
-	"gocloud.dev/internal/gcerr"
+	"github.com/eliben/gocdkx/gcerrors"
+	"github.com/eliben/gocdkx/internal/docstore/internal/fields"
+	"github.com/eliben/gocdkx/internal/gcerr"
 )
 
 var fieldCache = fields.NewCache(nil, nil, nil)

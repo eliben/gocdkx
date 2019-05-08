@@ -22,9 +22,9 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"gocloud.dev/internal/docstore/driver"
-	"gocloud.dev/internal/gcerr"
-	"gocloud.dev/internal/openurl"
+	"github.com/eliben/gocdkx/internal/docstore/driver"
+	"github.com/eliben/gocdkx/internal/gcerr"
+	"github.com/eliben/gocdkx/internal/openurl"
 )
 
 // A Document is a set of field-value pairs. One or more fields, called the key
@@ -233,7 +233,7 @@ func (e ActionListError) Unwrap() error {
 // BeforeDo takes a callback function that will be called before the ActionList
 // is executed by the underlying provider's action functionality. The callback
 // takes a parameter, asFunc, that converts its argument to provider-specific
-// types. See https://godoc.org/gocloud.dev#hdr-As for background information.
+// types. See https://godoc.org/github.com/eliben/gocdkx#hdr-As for background information.
 func (l *ActionList) BeforeDo(f func(asFunc func(interface{}) bool) error) *ActionList {
 	l.beforeDo = f
 	return l
@@ -396,7 +396,7 @@ func parseFieldPath(fp FieldPath) ([]string, error) {
 }
 
 // As converts i to provider-specific types.
-// See https://godoc.org/gocloud.dev#hdr-As for background information, the "As"
+// See https://godoc.org/github.com/eliben/gocdkx#hdr-As for background information, the "As"
 // examples in this package for examples, and the provider-specific package
 // documentation for the specific types supported for that provider.
 func (c *Collection) As(i interface{}) bool {
@@ -417,7 +417,7 @@ type CollectionURLOpener interface {
 
 // URLMux is a URL opener multiplexer. It matches the scheme of the URLs against
 // a set of registered schemes and calls the opener that matches the URL's
-// scheme. See https://gocloud.dev/concepts/urls/ for more information.
+// scheme. See https://github.com/eliben/gocdkx/concepts/urls/ for more information.
 //
 // The zero value is a multiplexer with no registered scheme.
 type URLMux struct {
@@ -467,7 +467,7 @@ func DefaultURLMux() *URLMux {
 
 // OpenCollection opens the collection identified by the URL given.
 // See the URLOpener documentation in provider-specific subpackages for details
-// on supported URL formats, and https://gocloud.dev/concepts/urls/ for more
+// on supported URL formats, and https://github.com/eliben/gocdkx/concepts/urls/ for more
 // information.
 func OpenCollection(ctx context.Context, urlstr string) (*Collection, error) {
 	return defaultURLMux.OpenCollection(ctx, urlstr)

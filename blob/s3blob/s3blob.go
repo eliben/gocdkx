@@ -23,7 +23,7 @@
 // for more details.
 // To customize the URL opener, or for more details on the URL format,
 // see URLOpener.
-// See https://gocloud.dev/concepts/urls/ for background information.
+// See https://github.com/eliben/gocdkx/concepts/urls/ for background information.
 //
 // Escaping
 //
@@ -51,7 +51,7 @@
 //  - Attributes: s3.HeadObjectOutput
 //  - CopyOptions.BeforeCopy: *s3.CopyObjectInput
 //  - WriterOptions.BeforeWrite: *s3manager.UploadInput
-package s3blob // import "gocloud.dev/blob/s3blob"
+package s3blob // import "github.com/eliben/gocdkx/blob/s3blob"
 
 import (
 	"context"
@@ -74,11 +74,11 @@ import (
 	"github.com/aws/aws-sdk-go/service/s3"
 	"github.com/aws/aws-sdk-go/service/s3/s3manager"
 	"github.com/google/wire"
-	gcaws "gocloud.dev/aws"
-	"gocloud.dev/blob"
-	"gocloud.dev/blob/driver"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/escape"
+	gcaws "github.com/eliben/gocdkx/aws"
+	"github.com/eliben/gocdkx/blob"
+	"github.com/eliben/gocdkx/blob/driver"
+	"github.com/eliben/gocdkx/gcerrors"
+	"github.com/eliben/gocdkx/internal/escape"
 )
 
 const defaultPageSize = 1000
@@ -126,7 +126,7 @@ const Scheme = "s3"
 //
 // The URL host is used as the bucket name.
 //
-// See gocloud.dev/aws/ConfigFromURLParams for supported query parameters
+// See github.com/eliben/gocdkx/aws/ConfigFromURLParams for supported query parameters
 // that affect the default AWS session.
 type URLOpener struct {
 	// ConfigProvider must be set to a non-nil value.

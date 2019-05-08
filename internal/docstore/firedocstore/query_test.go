@@ -21,8 +21,8 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	"github.com/google/go-cmp/cmp"
-	"gocloud.dev/internal/docstore/driver"
-	"gocloud.dev/internal/docstore/drivertest"
+	"github.com/eliben/gocdkx/internal/docstore/driver"
+	"github.com/eliben/gocdkx/internal/docstore/drivertest"
 	pb "google.golang.org/genproto/googleapis/firestore/v1"
 )
 

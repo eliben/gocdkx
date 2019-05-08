@@ -20,9 +20,9 @@ import (
 	"context"
 
 	"github.com/google/wire"
-	"gocloud.dev/gcp"
-	"gocloud.dev/gcp/gcpcloud"
-	"gocloud.dev/server"
+	"github.com/eliben/gocdkx/gcp"
+	"github.com/eliben/gocdkx/gcp/gcpcloud"
+	"github.com/eliben/gocdkx/server"
 )
 
 func initialize(ctx context.Context) (*server.Server, func(), error) {

@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"log"
 
-	"gocloud.dev/runtimevar"
-	"gocloud.dev/runtimevar/constantvar"
+	"github.com/eliben/gocdkx/runtimevar"
+	"github.com/eliben/gocdkx/runtimevar/constantvar"
 )
 
 // MyConfig is a sample configuration struct.

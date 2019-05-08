@@ -31,8 +31,8 @@
 // "mem".
 // To customize the URL opener, or for more details on the URL format,
 // see URLOpener.
-// See https://gocloud.dev/concepts/urls/ for background information.
-package memdocstore // import "gocloud.dev/internal/docstore/memdocstore"
+// See https://github.com/eliben/gocdkx/concepts/urls/ for background information.
+package memdocstore // import "github.com/eliben/gocdkx/internal/docstore/memdocstore"
 
 import (
 	"context"
@@ -42,10 +42,10 @@ import (
 	"strings"
 	"sync"
 
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/docstore"
-	"gocloud.dev/internal/docstore/driver"
-	"gocloud.dev/internal/gcerr"
+	"github.com/eliben/gocdkx/gcerrors"
+	"github.com/eliben/gocdkx/internal/docstore"
+	"github.com/eliben/gocdkx/internal/docstore/driver"
+	"github.com/eliben/gocdkx/internal/gcerr"
 )
 
 func init() {

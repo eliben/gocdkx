@@ -25,7 +25,7 @@
 // https://cloud.google.com/docs/authentication/production.
 // To customize the URL opener, or for more details on the URL format,
 // see URLOpener.
-// See https://gocloud.dev/concepts/urls/ for background information.
+// See https://github.com/eliben/gocdkx/concepts/urls/ for background information.
 //
 // As
 //
@@ -50,11 +50,11 @@ import (
 
 	vkit "cloud.google.com/go/firestore/apiv1"
 	ts "github.com/golang/protobuf/ptypes/timestamp"
-	"gocloud.dev/gcp"
-	"gocloud.dev/internal/docstore"
-	"gocloud.dev/internal/docstore/driver"
-	"gocloud.dev/internal/gcerr"
-	"gocloud.dev/internal/useragent"
+	"github.com/eliben/gocdkx/gcp"
+	"github.com/eliben/gocdkx/internal/docstore"
+	"github.com/eliben/gocdkx/internal/docstore/driver"
+	"github.com/eliben/gocdkx/internal/gcerr"
+	"github.com/eliben/gocdkx/internal/useragent"
 	"google.golang.org/api/option"
 	pb "google.golang.org/genproto/googleapis/firestore/v1"
 	"google.golang.org/grpc/metadata"

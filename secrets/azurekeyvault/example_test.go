@@ -19,8 +19,8 @@ import (
 	"log"
 
 	"github.com/Azure/azure-sdk-for-go/services/keyvault/v7.0/keyvault"
-	"gocloud.dev/secrets"
-	akv "gocloud.dev/secrets/azurekeyvault"
+	"github.com/eliben/gocdkx/secrets"
+	akv "github.com/eliben/gocdkx/secrets/azurekeyvault"
 )
 
 func Example() {

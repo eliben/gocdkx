@@ -14,7 +14,7 @@
 
 // Package drivertest provides a conformance test for implementations of
 // the secrets driver.
-package drivertest // import "gocloud.dev/secrets/drivertest"
+package drivertest // import "github.com/eliben/gocdkx/secrets/drivertest"
 
 import (
 	"bytes"
@@ -23,8 +23,8 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"gocloud.dev/secrets"
-	"gocloud.dev/secrets/driver"
+	"github.com/eliben/gocdkx/secrets"
+	"github.com/eliben/gocdkx/secrets/driver"
 )
 
 // Harness descibes the functionality test harnesses must provide to run

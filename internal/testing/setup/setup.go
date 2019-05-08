@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package setup // import "gocloud.dev/internal/testing/setup"
+package setup // import "github.com/eliben/gocdkx/internal/testing/setup"
 
 import (
 	"context"
@@ -28,8 +28,8 @@ import (
 	"github.com/aws/aws-sdk-go/aws"
 	awscreds "github.com/aws/aws-sdk-go/aws/credentials"
 	"github.com/aws/aws-sdk-go/aws/session"
-	"gocloud.dev/gcp"
-	"gocloud.dev/internal/useragent"
+	"github.com/eliben/gocdkx/gcp"
+	"github.com/eliben/gocdkx/internal/useragent"
 
 	"cloud.google.com/go/httpreplay"
 	"cloud.google.com/go/rpcreplay"

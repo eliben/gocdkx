@@ -19,7 +19,7 @@ import (
 	"context"
 
 	"go.opencensus.io/trace"
-	"gocloud.dev/gcerrors"
+	"github.com/eliben/gocdkx/gcerrors"
 )
 
 // StartSpan adds a span to the trace with the given name.

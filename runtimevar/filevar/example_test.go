@@ -20,8 +20,8 @@ import (
 	"io/ioutil"
 	"log"
 
-	"gocloud.dev/runtimevar"
-	"gocloud.dev/runtimevar/filevar"
+	"github.com/eliben/gocdkx/runtimevar"
+	"github.com/eliben/gocdkx/runtimevar/filevar"
 )
 
 // MyConfig is a sample configuration struct.

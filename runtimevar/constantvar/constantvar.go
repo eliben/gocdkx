@@ -20,12 +20,12 @@
 //
 // For runtimevar.OpenVariable, constantvar registers for the scheme "constant".
 // For more details on the URL format, see URLOpener.
-// See https://gocloud.dev/concepts/urls/ for background information.
+// See https://github.com/eliben/gocdkx/concepts/urls/ for background information.
 //
 // As
 //
 // constantvar does not support any types for As.
-package constantvar // import "gocloud.dev/runtimevar/constantvar"
+package constantvar // import "github.com/eliben/gocdkx/runtimevar/constantvar"
 
 import (
 	"context"
@@ -34,9 +34,9 @@ import (
 	"net/url"
 	"time"
 
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/runtimevar"
-	"gocloud.dev/runtimevar/driver"
+	"github.com/eliben/gocdkx/gcerrors"
+	"github.com/eliben/gocdkx/runtimevar"
+	"github.com/eliben/gocdkx/runtimevar/driver"
 )
 
 func init() {

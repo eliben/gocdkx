@@ -23,7 +23,7 @@ import (
 	"os"
 
 	"github.com/gorilla/mux"
-	"gocloud.dev/server"
+	"github.com/eliben/gocdkx/server"
 )
 
 func main() {

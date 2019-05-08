@@ -23,12 +23,12 @@ import (
 	"path/filepath"
 	"strings"
 
-	"gocloud.dev/blob"
-	"gocloud.dev/blob/fileblob"
+	"github.com/eliben/gocdkx/blob"
+	"github.com/eliben/gocdkx/blob/fileblob"
 )
 
 func Example() {
-	// This example is used in https://gocloud.dev/howto/blob/open-bucket/#local-ctor
+	// This example is used in https://github.com/eliben/gocdkx/howto/blob/open-bucket/#local-ctor
 
 	// The directory you pass to fileblob.OpenBucket must exist first.
 	const myDir = "path/to/local/directory"

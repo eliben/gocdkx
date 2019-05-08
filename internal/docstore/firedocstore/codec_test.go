@@ -21,7 +21,7 @@ import (
 	"github.com/golang/protobuf/ptypes"
 	ts "github.com/golang/protobuf/ptypes/timestamp"
 	"github.com/google/go-cmp/cmp"
-	"gocloud.dev/internal/docstore/drivertest"
+	"github.com/eliben/gocdkx/internal/docstore/drivertest"
 	"google.golang.org/genproto/googleapis/type/latlng"
 )
 

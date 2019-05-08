@@ -19,8 +19,8 @@ import (
 	"log"
 
 	"github.com/aws/aws-sdk-go/aws/session"
-	"gocloud.dev/secrets"
-	"gocloud.dev/secrets/awskms"
+	"github.com/eliben/gocdkx/secrets"
+	"github.com/eliben/gocdkx/secrets/awskms"
 )
 
 func Example() {

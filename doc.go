@@ -33,11 +33,11 @@ allows the Go CDK to grow to support any number of cloud providers, without
 increasing compile times or binary sizes, and avoiding any side effects from
 `init()` functions.
 
-For non-reference documentation, see https://gocloud.dev/
+For non-reference documentation, see https://github.com/eliben/gocdkx/
 
 URLs
 
-See https://gocloud.dev/concepts/urls/ for a discussion of URLs in the Go CDK.
+See https://github.com/eliben/gocdkx/concepts/urls/ for a discussion of URLs in the Go CDK.
 
 Escaping the abstraction
 
@@ -76,4 +76,4 @@ provider-specific type into your variable. Otherwise, it will return false.
 Provider-specific types that are intended to be mutable will be exposed
 as a pointer to the underlying type.
 */
-package cloud // import "gocloud.dev"
+package cloud // import "github.com/eliben/gocdkx"

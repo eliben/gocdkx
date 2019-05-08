@@ -25,13 +25,13 @@
 // environment variable "NATS_SERVER_URL".
 // To customize the URL opener, or for more details on the URL format,
 // see URLOpener.
-// See https://gocloud.dev/concepts/urls/ for background information.
+// See https://github.com/eliben/gocdkx/concepts/urls/ for background information.
 //
 // Message Delivery Semantics
 //
 // NATS supports at-most-semantics; applications need not call Message.Ack,
 // and must not call Message.Nack.
-// See https://godoc.org/gocloud.dev/pubsub#hdr-At_most_once_and_At_least_once_Delivery
+// See https://godoc.org/github.com/eliben/gocdkx/pubsub#hdr-At_most_once_and_At_least_once_Delivery
 // for more background.
 //
 // As
@@ -41,7 +41,7 @@
 //  - Subscription: *nats.Subscription
 //  - Message.BeforeSend: None.
 //  - Message: *nats.Msg
-package natspubsub // import "gocloud.dev/pubsub/natspubsub"
+package natspubsub // import "github.com/eliben/gocdkx/pubsub/natspubsub"
 
 import (
 	"bytes"
@@ -57,10 +57,10 @@ import (
 	"time"
 
 	"github.com/nats-io/go-nats"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/batcher"
-	"gocloud.dev/pubsub"
-	"gocloud.dev/pubsub/driver"
+	"github.com/eliben/gocdkx/gcerrors"
+	"github.com/eliben/gocdkx/internal/batcher"
+	"github.com/eliben/gocdkx/pubsub"
+	"github.com/eliben/gocdkx/pubsub/driver"
 )
 
 var errNotInitialized = errors.New("natspubsub: topic not initialized")
@@ -142,7 +142,7 @@ const Scheme = "nats"
 //       the behavior if pubsub.Subscription.Ack (which is a meaningless no-op
 //       for NATS) is called: "log" means a log.Printf warning will be emitted;
 //       "noop" means nothing will happen; and "panic" means the application
-//       will panic. See https://godoc.org/gocloud.dev/pubsub#hdr-At_most_once_and_At_least_once_Delivery
+//       will panic. See https://godoc.org/github.com/eliben/gocdkx/pubsub#hdr-At_most_once_and_At_least_once_Delivery
 //       for more background.
 // No query parameters are supported.
 type URLOpener struct {
@@ -313,7 +313,7 @@ type subscription struct {
 // received message; Ack is a meaningless no-op for NATS. You can provide an
 // empty function to leave it a no-op, or panic/log a warning if you don't
 // expect Ack to be called.
-// See https://godoc.org/gocloud.dev/pubsub#hdr-At_most_once_and_At_least_once_Delivery
+// See https://godoc.org/github.com/eliben/gocdkx/pubsub#hdr-At_most_once_and_At_least_once_Delivery
 // for more background.
 //
 // TODO(dlc) - Options for queue groups?

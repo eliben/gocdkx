@@ -24,7 +24,7 @@
 // the environment variable "SERVICEBUS_CONNECTION_STRING".
 // To customize the URL opener, or for more details on the URL format,
 // see URLOpener.
-// See https://gocloud.dev/concepts/urls/ for background information.
+// See https://github.com/eliben/gocdkx/concepts/urls/ for background information.
 //
 // Message Delivery Semantics
 //
@@ -34,7 +34,7 @@
 // which essentially auto-acks a message when it is delivered, resulting in
 // at-most-once semantics. Use SubscriberOptions.AckFuncForReceiveAndDelete
 // to choose between the two.
-// See https://godoc.org/gocloud.dev/pubsub#hdr-At_most_once_and_At_least_once_Delivery
+// See https://godoc.org/github.com/eliben/gocdkx/pubsub#hdr-At_most_once_and_At_least_once_Delivery
 // for more background.
 //
 // As
@@ -45,7 +45,7 @@
 //  - Message.BeforeSend: *servicebus.Message
 //  - Message: *servicebus.Message
 //  - Error: common.Retryable
-package azuresb // import "gocloud.dev/pubsub/azuresb"
+package azuresb // import "github.com/eliben/gocdkx/pubsub/azuresb"
 
 import (
 	"context"
@@ -65,11 +65,11 @@ import (
 	"github.com/Azure/azure-amqp-common-go/uuid"
 	servicebus "github.com/Azure/azure-service-bus-go"
 	"github.com/google/wire"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/batcher"
-	"gocloud.dev/internal/useragent"
-	"gocloud.dev/pubsub"
-	"gocloud.dev/pubsub/driver"
+	"github.com/eliben/gocdkx/gcerrors"
+	"github.com/eliben/gocdkx/internal/batcher"
+	"github.com/eliben/gocdkx/internal/useragent"
+	"github.com/eliben/gocdkx/pubsub"
+	"github.com/eliben/gocdkx/pubsub/driver"
 	"pack.ag/amqp"
 )
 

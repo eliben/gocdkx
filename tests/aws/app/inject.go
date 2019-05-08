@@ -20,8 +20,8 @@ import (
 	"context"
 
 	"github.com/google/wire"
-	"gocloud.dev/aws/awscloud"
-	"gocloud.dev/server"
+	"github.com/eliben/gocdkx/aws/awscloud"
+	"github.com/eliben/gocdkx/server"
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/client"

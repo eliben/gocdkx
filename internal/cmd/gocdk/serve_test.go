@@ -27,7 +27,7 @@ import (
 	"testing"
 	"time"
 
-	"gocloud.dev/health"
+	"github.com/eliben/gocdkx/health"
 	"golang.org/x/xerrors"
 )
 

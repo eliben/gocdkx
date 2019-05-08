@@ -19,8 +19,8 @@ import (
 	"log"
 
 	"github.com/hashicorp/vault/api"
-	"gocloud.dev/secrets"
-	"gocloud.dev/secrets/vault"
+	"github.com/eliben/gocdkx/secrets"
+	"github.com/eliben/gocdkx/secrets/vault"
 )
 
 func Example_encrypt() {

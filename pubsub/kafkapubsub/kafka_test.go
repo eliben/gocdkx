@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package kafkapubsub // import "gocloud.dev/pubsub/kafkapubsub"
+package kafkapubsub // import "github.com/eliben/gocdkx/pubsub/kafkapubsub"
 
 // To run these tests against a real Kafka server, run localkafka.sh.
 // See https://github.com/spotify/docker-kafka for more on the docker container
@@ -33,9 +33,9 @@ import (
 	"github.com/Shopify/sarama"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"gocloud.dev/pubsub"
-	"gocloud.dev/pubsub/driver"
-	"gocloud.dev/pubsub/drivertest"
+	"github.com/eliben/gocdkx/pubsub"
+	"github.com/eliben/gocdkx/pubsub/driver"
+	"github.com/eliben/gocdkx/pubsub/drivertest"
 )
 
 var (

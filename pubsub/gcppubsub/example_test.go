@@ -18,13 +18,13 @@ import (
 	"context"
 	"log"
 
-	"gocloud.dev/gcp"
-	"gocloud.dev/pubsub"
-	"gocloud.dev/pubsub/gcppubsub"
+	"github.com/eliben/gocdkx/gcp"
+	"github.com/eliben/gocdkx/pubsub"
+	"github.com/eliben/gocdkx/pubsub/gcppubsub"
 )
 
 func ExampleOpenTopic() {
-	// This example is used in https://gocloud.dev/howto/pubsub/publish/#gcp-ctor
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/publish/#gcp-ctor
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -61,9 +61,9 @@ func ExampleOpenTopic() {
 }
 
 func Example_openTopic() {
-	// This example is used in https://gocloud.dev/howto/pubsub/publish/#gcp
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/publish/#gcp
 
-	// import _ "gocloud.dev/pubsub/gcppubsub"
+	// import _ "github.com/eliben/gocdkx/pubsub/gcppubsub"
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -76,7 +76,7 @@ func Example_openTopic() {
 }
 
 func ExampleOpenSubscription() {
-	// This example is used in https://gocloud.dev/howto/pubsub/subscribe/#gcp-ctor
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/subscribe/#gcp-ctor
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -115,9 +115,9 @@ func ExampleOpenSubscription() {
 }
 
 func Example_openSubscription() {
-	// This example is used in https://gocloud.dev/howto/pubsub/subscribe/#gcp
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/subscribe/#gcp
 
-	// import _ "gocloud.dev/pubsub/gcppubsub"
+	// import _ "github.com/eliben/gocdkx/pubsub/gcppubsub"
 
 	// Variables set up elsewhere:
 	ctx := context.Background()

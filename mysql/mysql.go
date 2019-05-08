@@ -22,7 +22,7 @@ import (
 	"net/url"
 
 	"github.com/go-sql-driver/mysql"
-	"gocloud.dev/internal/openurl"
+	"github.com/eliben/gocdkx/internal/openurl"
 
 	"contrib.go.opencensus.io/integrations/ocsql"
 )

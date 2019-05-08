@@ -24,23 +24,23 @@ import (
 	"os"
 
 	"github.com/google/subcommands"
-	"gocloud.dev/runtimevar"
+	"github.com/eliben/gocdkx/runtimevar"
 
 	// Import the runtimevar driver packages we want to be able to open.
-	_ "gocloud.dev/runtimevar/awsparamstore"
-	_ "gocloud.dev/runtimevar/blobvar"
-	_ "gocloud.dev/runtimevar/constantvar"
-	_ "gocloud.dev/runtimevar/etcdvar"
-	_ "gocloud.dev/runtimevar/filevar"
-	_ "gocloud.dev/runtimevar/gcpruntimeconfig"
-	_ "gocloud.dev/runtimevar/httpvar"
+	_ "github.com/eliben/gocdkx/runtimevar/awsparamstore"
+	_ "github.com/eliben/gocdkx/runtimevar/blobvar"
+	_ "github.com/eliben/gocdkx/runtimevar/constantvar"
+	_ "github.com/eliben/gocdkx/runtimevar/etcdvar"
+	_ "github.com/eliben/gocdkx/runtimevar/filevar"
+	_ "github.com/eliben/gocdkx/runtimevar/gcpruntimeconfig"
+	_ "github.com/eliben/gocdkx/runtimevar/httpvar"
 )
 
 const helpSuffix = `
 
-  See https://gocloud.dev/concepts/urls/ for more background on
-  Go CDK URLs, and sub-packages under gocloud.dev/runtimevar
-  (https://godoc.org/gocloud.dev/runtimevar#pkg-subdirectories)
+  See https://github.com/eliben/gocdkx/concepts/urls/ for more background on
+  Go CDK URLs, and sub-packages under github.com/eliben/gocdkx/runtimevar
+  (https://godoc.org/github.com/eliben/gocdkx/runtimevar#pkg-subdirectories)
   for details on the runtimevar.Variable URL format.
 `
 

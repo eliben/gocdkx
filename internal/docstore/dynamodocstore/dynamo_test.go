@@ -23,11 +23,11 @@ import (
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	dyn "github.com/aws/aws-sdk-go/service/dynamodb"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/docstore"
-	"gocloud.dev/internal/docstore/driver"
-	"gocloud.dev/internal/docstore/drivertest"
-	"gocloud.dev/internal/testing/setup"
+	"github.com/eliben/gocdkx/gcerrors"
+	"github.com/eliben/gocdkx/internal/docstore"
+	"github.com/eliben/gocdkx/internal/docstore/driver"
+	"github.com/eliben/gocdkx/internal/docstore/drivertest"
+	"github.com/eliben/gocdkx/internal/testing/setup"
 )
 
 // To create the tables and indexes needed for these tests, run create_tables.sh in

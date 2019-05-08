@@ -20,12 +20,12 @@ import (
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
-	"gocloud.dev/blob"
-	"gocloud.dev/blob/s3blob"
+	"github.com/eliben/gocdkx/blob"
+	"github.com/eliben/gocdkx/blob/s3blob"
 )
 
 func Example() {
-	// This example is used in https://gocloud.dev/howto/blob/open-bucket/#s3-ctor
+	// This example is used in https://github.com/eliben/gocdkx/howto/blob/open-bucket/#s3-ctor
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -49,9 +49,9 @@ func Example() {
 }
 
 func Example_openBucket() {
-	// This example is used in https://gocloud.dev/howto/blob/open-bucket/#s3
+	// This example is used in https://github.com/eliben/gocdkx/howto/blob/open-bucket/#s3
 
-	// import _ "gocloud.dev/blob/s3blob"
+	// import _ "github.com/eliben/gocdkx/blob/s3blob"
 
 	// Variables set up elsewhere:
 	ctx := context.Background()

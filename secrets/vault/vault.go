@@ -23,7 +23,7 @@
 // variables "VAULT_SERVER_URL" and "VAULT_SERVER_TOKEN".
 // To customize the URL opener, or for more details on the URL format,
 // see URLOpener.
-// See https://gocloud.dev/concepts/urls/ for background information.
+// See https://github.com/eliben/gocdkx/concepts/urls/ for background information.
 //
 // As
 //
@@ -41,8 +41,8 @@ import (
 	"sync"
 
 	"github.com/hashicorp/vault/api"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/secrets"
+	"github.com/eliben/gocdkx/gcerrors"
+	"github.com/eliben/gocdkx/secrets"
 )
 
 // Config is the authentication configurations of the Vault server.

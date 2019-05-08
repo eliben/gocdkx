@@ -17,7 +17,7 @@ package docstore_test
 import (
 	"context"
 
-	"gocloud.dev/internal/docstore"
+	"github.com/eliben/gocdkx/internal/docstore"
 )
 
 func Example_actions() {

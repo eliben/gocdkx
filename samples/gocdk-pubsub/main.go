@@ -25,22 +25,22 @@ import (
 	"os"
 
 	"github.com/google/subcommands"
-	"gocloud.dev/pubsub"
+	"github.com/eliben/gocdkx/pubsub"
 
 	// Import the pubsub driver packages we want to be able to open.
-	_ "gocloud.dev/pubsub/awssnssqs"
-	_ "gocloud.dev/pubsub/azuresb"
-	_ "gocloud.dev/pubsub/gcppubsub"
-	_ "gocloud.dev/pubsub/kafkapubsub"
-	_ "gocloud.dev/pubsub/natspubsub"
-	_ "gocloud.dev/pubsub/rabbitpubsub"
+	_ "github.com/eliben/gocdkx/pubsub/awssnssqs"
+	_ "github.com/eliben/gocdkx/pubsub/azuresb"
+	_ "github.com/eliben/gocdkx/pubsub/gcppubsub"
+	_ "github.com/eliben/gocdkx/pubsub/kafkapubsub"
+	_ "github.com/eliben/gocdkx/pubsub/natspubsub"
+	_ "github.com/eliben/gocdkx/pubsub/rabbitpubsub"
 )
 
 const helpSuffix = `
 
-  See https://gocloud.dev/concepts/urls/ for more background on
-  Go CDK URLs, and sub-packages under gocloud.dev/pubsub
-  (https://godoc.org/gocloud.dev/pubsub#pkg-subdirectories)
+  See https://github.com/eliben/gocdkx/concepts/urls/ for more background on
+  Go CDK URLs, and sub-packages under github.com/eliben/gocdkx/pubsub
+  (https://godoc.org/github.com/eliben/gocdkx/pubsub#pkg-subdirectories)
   for details on the topic/subscription URL format.
 `
 

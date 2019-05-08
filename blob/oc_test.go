@@ -21,11 +21,11 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"go.opencensus.io/stats/view"
 	"go.opencensus.io/tag"
-	"gocloud.dev/blob"
-	"gocloud.dev/blob/memblob"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/oc"
-	"gocloud.dev/internal/testing/octest"
+	"github.com/eliben/gocdkx/blob"
+	"github.com/eliben/gocdkx/blob/memblob"
+	"github.com/eliben/gocdkx/gcerrors"
+	"github.com/eliben/gocdkx/internal/oc"
+	"github.com/eliben/gocdkx/internal/testing/octest"
 )
 
 func TestOpenCensus(t *testing.T) {
@@ -52,9 +52,9 @@ func TestOpenCensus(t *testing.T) {
 		t.Fatal("got nil, want error")
 	}
 
-	const provider = "gocloud.dev/blob/memblob"
+	const provider = "github.com/eliben/gocdkx/blob/memblob"
 
-	diff := octest.Diff(te.Spans(), te.Counts(), "gocloud.dev/blob", provider, []octest.Call{
+	diff := octest.Diff(te.Spans(), te.Counts(), "github.com/eliben/gocdkx/blob", provider, []octest.Call{
 		{Method: "NewWriter", Code: gcerrors.OK},
 		{Method: "NewRangeReader", Code: gcerrors.OK},
 		{Method: "Attributes", Code: gcerrors.OK},
@@ -71,12 +71,12 @@ func TestOpenCensus(t *testing.T) {
 	for !sawRead || !sawWritten {
 		data := <-te.Stats
 		switch data.View.Name {
-		case "gocloud.dev/blob/bytes_read":
+		case "github.com/eliben/gocdkx/blob/bytes_read":
 			if sawRead {
 				continue
 			}
 			sawRead = true
-		case "gocloud.dev/blob/bytes_written":
+		case "github.com/eliben/gocdkx/blob/bytes_written":
 			if sawWritten {
 				continue
 			}

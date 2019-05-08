@@ -25,14 +25,14 @@
 // for more details.
 // To customize the URL opener, or for more details on the URL format,
 // see URLOpener.
-// See https://gocloud.dev/concepts/urls/ for background information.
+// See https://github.com/eliben/gocdkx/concepts/urls/ for background information.
 //
 // As
 //
 // awsparamstore exposes the following types for As:
 //  - Snapshot: *ssm.GetParameterOutput, *ssm.DescribeParametersOutput
 //  - Error: awserr.Error
-package awsparamstore // import "gocloud.dev/runtimevar/awsparamstore"
+package awsparamstore // import "github.com/eliben/gocdkx/runtimevar/awsparamstore"
 
 import (
 	"context"
@@ -48,10 +48,10 @@ import (
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/ssm"
 	"github.com/google/wire"
-	gcaws "gocloud.dev/aws"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/runtimevar"
-	"gocloud.dev/runtimevar/driver"
+	gcaws "github.com/eliben/gocdkx/aws"
+	"github.com/eliben/gocdkx/gcerrors"
+	"github.com/eliben/gocdkx/runtimevar"
+	"github.com/eliben/gocdkx/runtimevar/driver"
 )
 
 func init() {
@@ -65,7 +65,7 @@ var Set = wire.NewSet(
 )
 
 // URLOpener opens AWS Paramstore URLs like "awsparamstore://myvar".
-// See gocloud.dev/aws/ConfigFromURLParams for supported query parameters
+// See github.com/eliben/gocdkx/aws/ConfigFromURLParams for supported query parameters
 // that affect the default AWS session.
 //
 // In addition, the following URL parameters are supported:

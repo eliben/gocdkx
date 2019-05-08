@@ -19,12 +19,12 @@ import (
 	"log"
 
 	"github.com/Azure/azure-storage-blob-go/azblob"
-	"gocloud.dev/blob"
-	"gocloud.dev/blob/azureblob"
+	"github.com/eliben/gocdkx/blob"
+	"github.com/eliben/gocdkx/blob/azureblob"
 )
 
 func Example() {
-	// This example is used in https://gocloud.dev/howto/blob/open-bucket/#azure-ctor
+	// This example is used in https://github.com/eliben/gocdkx/howto/blob/open-bucket/#azure-ctor
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -91,9 +91,9 @@ func Example_sasToken() {
 }
 
 func Example_openBucket() {
-	// This example is used in https://gocloud.dev/howto/blob/open-bucket/#azure
+	// This example is used in https://github.com/eliben/gocdkx/howto/blob/open-bucket/#azure
 
-	// import _ "gocloud.dev/blob/azureblob"
+	// import _ "github.com/eliben/gocdkx/blob/azureblob"
 
 	// Variables set up elsewhere:
 	ctx := context.Background()

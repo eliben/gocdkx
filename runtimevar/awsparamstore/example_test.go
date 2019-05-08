@@ -19,8 +19,8 @@ import (
 	"log"
 
 	"github.com/aws/aws-sdk-go/aws/session"
-	"gocloud.dev/runtimevar"
-	"gocloud.dev/runtimevar/awsparamstore"
+	"github.com/eliben/gocdkx/runtimevar"
+	"github.com/eliben/gocdkx/runtimevar/awsparamstore"
 )
 
 // MyConfig is a sample configuration struct.

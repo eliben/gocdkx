@@ -21,7 +21,7 @@ import (
 	"reflect"
 	"strings"
 
-	"gocloud.dev/internal/docstore/driver"
+	"github.com/eliben/gocdkx/internal/docstore/driver"
 )
 
 func (c *collection) RunGetQuery(_ context.Context, q *driver.Query) (driver.DocumentIterator, error) {

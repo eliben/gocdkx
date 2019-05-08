@@ -9,10 +9,10 @@ import (
 	"context"
 	"contrib.go.opencensus.io/exporter/stackdriver/monitoredresource"
 	"go.opencensus.io/trace"
-	"gocloud.dev/gcp"
-	"gocloud.dev/health"
-	"gocloud.dev/server"
-	"gocloud.dev/server/sdserver"
+	"github.com/eliben/gocdkx/gcp"
+	"github.com/eliben/gocdkx/health"
+	"github.com/eliben/gocdkx/server"
+	"github.com/eliben/gocdkx/server/sdserver"
 )
 
 // Injectors from inject.go:

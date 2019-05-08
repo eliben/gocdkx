@@ -22,9 +22,9 @@ import (
 	"time"
 
 	"github.com/hashicorp/vault/api"
-	"gocloud.dev/secrets"
-	"gocloud.dev/secrets/driver"
-	"gocloud.dev/secrets/drivertest"
+	"github.com/eliben/gocdkx/secrets"
+	"github.com/eliben/gocdkx/secrets/driver"
+	"github.com/eliben/gocdkx/secrets/drivertest"
 )
 
 // To run these tests against a real Vault server, first run ./localvault.sh.

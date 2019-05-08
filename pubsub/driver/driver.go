@@ -14,12 +14,12 @@
 
 // Package driver defines a set of interfaces that the pubsub package uses to
 // interact with the underlying pubsub services.
-package driver // import "gocloud.dev/pubsub/driver"
+package driver // import "github.com/eliben/gocdkx/pubsub/driver"
 
 import (
 	"context"
 
-	"gocloud.dev/gcerrors"
+	"github.com/eliben/gocdkx/gcerrors"
 )
 
 // AckID is the identifier of a message for purposes of acknowledgement.
@@ -59,7 +59,7 @@ type Message struct {
 	// The callback must be called exactly once, before the message is sent.
 	//
 	// asFunc converts its argument to provider-specific types.
-	// See https://godoc.org/gocloud.dev#hdr-As for background information.
+	// See https://godoc.org/github.com/eliben/gocdkx#hdr-As for background information.
 	BeforeSend func(asFunc func(interface{}) bool) error
 }
 
@@ -96,11 +96,11 @@ type Topic interface {
 	IsRetryable(err error) bool
 
 	// As allows providers to expose provider-specific types.
-	// See https://godoc.org/gocloud.dev#hdr-As for background information.
+	// See https://godoc.org/github.com/eliben/gocdkx#hdr-As for background information.
 	As(i interface{}) bool
 
 	// ErrorAs allows providers to expose provider-specific types for errors.
-	// See https://godoc.org/gocloud.dev#hdr-As for background information.
+	// See https://godoc.org/github.com/eliben/gocdkx#hdr-As for background information.
 	ErrorAs(error, interface{}) bool
 
 	// ErrorCode should return a code that describes the error, which was returned by
@@ -183,11 +183,11 @@ type Subscription interface {
 	IsRetryable(err error) bool
 
 	// As converts i to provider-specific types.
-	// See https://godoc.org/gocloud.dev#hdr-As for background information.
+	// See https://godoc.org/github.com/eliben/gocdkx#hdr-As for background information.
 	As(i interface{}) bool
 
 	// ErrorAs allows providers to expose provider-specific types for errors.
-	// See https://godoc.org/gocloud.dev#hdr-As for background information.
+	// See https://godoc.org/github.com/eliben/gocdkx#hdr-As for background information.
 	ErrorAs(error, interface{}) bool
 
 	// ErrorCode should return a code that describes the error, which was returned by

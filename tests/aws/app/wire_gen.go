@@ -13,9 +13,9 @@ import (
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/google/wire"
 	"go.opencensus.io/trace"
-	"gocloud.dev/health"
-	"gocloud.dev/server"
-	"gocloud.dev/server/xrayserver"
+	"github.com/eliben/gocdkx/health"
+	"github.com/eliben/gocdkx/server"
+	"github.com/eliben/gocdkx/server/xrayserver"
 )
 
 // Injectors from inject.go:

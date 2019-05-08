@@ -19,12 +19,12 @@ import (
 	"fmt"
 	"log"
 
-	"gocloud.dev/blob"
-	"gocloud.dev/blob/memblob"
+	"github.com/eliben/gocdkx/blob"
+	"github.com/eliben/gocdkx/blob/memblob"
 )
 
 func Example() {
-	// This example is used in https://gocloud.dev/howto/blob/open-bucket/#local-ctor
+	// This example is used in https://github.com/eliben/gocdkx/howto/blob/open-bucket/#local-ctor
 
 	// Variables set up elsewhere:
 	ctx := context.Background()

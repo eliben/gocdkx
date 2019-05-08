@@ -23,8 +23,8 @@
 // To customize the URL opener, or for more details on the URL format,
 // see URLOpener.
 //
-// See https://gocloud.dev/concepts/urls/ for background information.
-package rdsmysql // import "gocloud.dev/mysql/rdsmysql"
+// See https://github.com/eliben/gocdkx/concepts/urls/ for background information.
+package rdsmysql // import "github.com/eliben/gocdkx/mysql/rdsmysql"
 
 import (
 	"context"
@@ -39,8 +39,8 @@ import (
 	"contrib.go.opencensus.io/integrations/ocsql"
 	"github.com/go-sql-driver/mysql"
 	"github.com/google/wire"
-	"gocloud.dev/aws/rds"
-	gcmysql "gocloud.dev/mysql"
+	"github.com/eliben/gocdkx/aws/rds"
+	gcmysql "github.com/eliben/gocdkx/mysql"
 )
 
 // Set is a Wire provider set that provides a *sql.DB given
@@ -147,7 +147,7 @@ func (c *connector) Connect(ctx context.Context) (driver.Conn, error) {
 		tlsConfigNum := tlsConfigCounter.n
 		tlsConfigCounter.n++
 		tlsConfigCounter.mu.Unlock()
-		tlsConfigName := fmt.Sprintf("gocloud.dev/mysql/rdsmysql/%d", tlsConfigNum)
+		tlsConfigName := fmt.Sprintf("github.com/eliben/gocdkx/mysql/rdsmysql/%d", tlsConfigNum)
 		err = mysql.RegisterTLSConfig(tlsConfigName, &tls.Config{
 			RootCAs: certPool,
 		})

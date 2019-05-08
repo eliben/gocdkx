@@ -29,7 +29,7 @@ import (
 	"time"
 
 	"github.com/google/go-github/github"
-	"gocloud.dev/pubsub"
+	"github.com/eliben/gocdkx/pubsub"
 )
 
 const userAgent = "google/go-cloud Contribute Bot"

@@ -22,14 +22,14 @@
 // variable "ETCD_SERVER_URL".
 // To customize the URL opener, or for more details on the URL format,
 // see URLOpener.
-// See https://gocloud.dev/concepts/urls/ for background information.
+// See https://github.com/eliben/gocdkx/concepts/urls/ for background information.
 //
 // As
 //
 // etcdvar exposes the following types for As:
 //  - Snapshot: *clientv3.GetResponse
 //  - Error: rpctypes.EtcdError
-package etcdvar // import "gocloud.dev/runtimevar/etcdvar"
+package etcdvar // import "github.com/eliben/gocdkx/runtimevar/etcdvar"
 
 import (
 	"context"
@@ -43,9 +43,9 @@ import (
 
 	"go.etcd.io/etcd/clientv3"
 	"go.etcd.io/etcd/etcdserver/api/v3rpc/rpctypes"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/runtimevar"
-	"gocloud.dev/runtimevar/driver"
+	"github.com/eliben/gocdkx/gcerrors"
+	"github.com/eliben/gocdkx/runtimevar"
+	"github.com/eliben/gocdkx/runtimevar/driver"
 	"google.golang.org/grpc/codes"
 )
 

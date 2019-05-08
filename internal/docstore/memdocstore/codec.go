@@ -18,8 +18,8 @@ import (
 	"fmt"
 	"reflect"
 
-	"gocloud.dev/internal/docstore"
-	"gocloud.dev/internal/docstore/driver"
+	"github.com/eliben/gocdkx/internal/docstore"
+	"github.com/eliben/gocdkx/internal/docstore/driver"
 )
 
 // encodeDoc encodes a driver.Document as a map[string]interface{}.

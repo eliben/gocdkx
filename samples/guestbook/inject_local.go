@@ -23,12 +23,12 @@ import (
 	"github.com/go-sql-driver/mysql"
 	"github.com/google/wire"
 	"go.opencensus.io/trace"
-	"gocloud.dev/blob"
-	"gocloud.dev/blob/fileblob"
-	"gocloud.dev/requestlog"
-	"gocloud.dev/runtimevar"
-	"gocloud.dev/runtimevar/filevar"
-	"gocloud.dev/server"
+	"github.com/eliben/gocdkx/blob"
+	"github.com/eliben/gocdkx/blob/fileblob"
+	"github.com/eliben/gocdkx/requestlog"
+	"github.com/eliben/gocdkx/runtimevar"
+	"github.com/eliben/gocdkx/runtimevar/filevar"
+	"github.com/eliben/gocdkx/server"
 )
 
 // This file wires the generic interfaces up to local implementations. It won't

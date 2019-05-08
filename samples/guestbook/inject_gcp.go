@@ -20,14 +20,14 @@ import (
 	"context"
 
 	"github.com/google/wire"
-	"gocloud.dev/blob"
-	"gocloud.dev/blob/gcsblob"
-	"gocloud.dev/gcp"
-	"gocloud.dev/gcp/gcpcloud"
-	"gocloud.dev/mysql/cloudmysql"
-	"gocloud.dev/runtimevar"
-	"gocloud.dev/runtimevar/gcpruntimeconfig"
-	"gocloud.dev/server"
+	"github.com/eliben/gocdkx/blob"
+	"github.com/eliben/gocdkx/blob/gcsblob"
+	"github.com/eliben/gocdkx/gcp"
+	"github.com/eliben/gocdkx/gcp/gcpcloud"
+	"github.com/eliben/gocdkx/mysql/cloudmysql"
+	"github.com/eliben/gocdkx/runtimevar"
+	"github.com/eliben/gocdkx/runtimevar/gcpruntimeconfig"
+	"github.com/eliben/gocdkx/server"
 	pb "google.golang.org/genproto/googleapis/cloud/runtimeconfig/v1beta1"
 )
 

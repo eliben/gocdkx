@@ -18,7 +18,7 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"gocloud.dev/internal/docstore/drivertest"
+	"github.com/eliben/gocdkx/internal/docstore/drivertest"
 )
 
 type aStruct struct {

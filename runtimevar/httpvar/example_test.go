@@ -19,8 +19,8 @@ import (
 	"log"
 	"net/http"
 
-	"gocloud.dev/runtimevar"
-	"gocloud.dev/runtimevar/httpvar"
+	"github.com/eliben/gocdkx/runtimevar"
+	"github.com/eliben/gocdkx/runtimevar/httpvar"
 )
 
 // MyConfig is a sample configuration struct.

@@ -20,12 +20,12 @@ import (
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
-	"gocloud.dev/pubsub"
-	"gocloud.dev/pubsub/awssnssqs"
+	"github.com/eliben/gocdkx/pubsub"
+	"github.com/eliben/gocdkx/pubsub/awssnssqs"
 )
 
 func ExampleOpenTopic() {
-	// This example is used in https://gocloud.dev/howto/pubsub/publish/#sns-ctor
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/publish/#sns-ctor
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -47,9 +47,9 @@ func ExampleOpenTopic() {
 }
 
 func Example_openTopic() {
-	// This example is used in https://gocloud.dev/howto/pubsub/publish/#sns
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/publish/#sns
 
-	// import _ "gocloud.dev/pubsub/awssnssqs"
+	// import _ "github.com/eliben/gocdkx/pubsub/awssnssqs"
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -63,7 +63,7 @@ func Example_openTopic() {
 }
 
 func ExampleOpenSubscription() {
-	// This example is used in https://gocloud.dev/howto/pubsub/subscribe/#sns-ctor
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/subscribe/#sns-ctor
 
 	// Variables set up elsewhere:
 	ctx := context.Background()
@@ -86,9 +86,9 @@ func ExampleOpenSubscription() {
 }
 
 func Example_openSubscription() {
-	// This example is used in https://gocloud.dev/howto/pubsub/subscribe/#sns
+	// This example is used in https://github.com/eliben/gocdkx/howto/pubsub/subscribe/#sns
 
-	// import _ "gocloud.dev/pubsub/awssnssqs"
+	// import _ "github.com/eliben/gocdkx/pubsub/awssnssqs"
 
 	// Variables set up elsewhere:
 	ctx := context.Background()

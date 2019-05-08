@@ -22,7 +22,7 @@ import (
 	"time"
 
 	dyn "github.com/aws/aws-sdk-go/service/dynamodb"
-	"gocloud.dev/internal/docstore/driver"
+	"github.com/eliben/gocdkx/internal/docstore/driver"
 )
 
 var nullValue = new(dyn.AttributeValue).SetNULL(true)

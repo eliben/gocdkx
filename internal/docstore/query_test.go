@@ -17,8 +17,8 @@ package docstore
 import (
 	"testing"
 
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/docstore/driver"
+	"github.com/eliben/gocdkx/gcerrors"
+	"github.com/eliben/gocdkx/internal/docstore/driver"
 )
 
 func TestQueryValidFilter(t *testing.T) {

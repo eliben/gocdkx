@@ -21,7 +21,7 @@
 // variable "MONGO_SERVER_URL".
 // To customize the URL opener, or for more details on the URL format,
 // see URLOpener.
-// See https://gocloud.dev/concepts/urls/ for background information.
+// See https://github.com/eliben/gocdkx/concepts/urls/ for background information.
 //
 // As
 //
@@ -34,7 +34,7 @@
 //
 // MongoDB types not supported by Docstore:
 // TODO(jba): write
-package mongodocstore // import "gocloud.dev/internal/docstore/mongodocstore"
+package mongodocstore // import "github.com/eliben/gocdkx/internal/docstore/mongodocstore"
 
 // MongoDB reference manual: https://docs.mongodb.com/manual
 // Client documentation: https://godoc.org/go.mongodb.org/mongo-driver/mongo
@@ -54,10 +54,10 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/docstore"
-	"gocloud.dev/internal/docstore/driver"
-	"gocloud.dev/internal/gcerr"
+	"github.com/eliben/gocdkx/gcerrors"
+	"github.com/eliben/gocdkx/internal/docstore"
+	"github.com/eliben/gocdkx/internal/docstore/driver"
+	"github.com/eliben/gocdkx/internal/gcerr"
 )
 
 func init() {

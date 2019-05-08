@@ -19,8 +19,8 @@ import (
 	"fmt"
 	"log"
 
-	"gocloud.dev/runtimevar"
-	_ "gocloud.dev/runtimevar/constantvar"
+	"github.com/eliben/gocdkx/runtimevar"
+	_ "github.com/eliben/gocdkx/runtimevar/constantvar"
 )
 
 func ExampleOpenVariable() {
@@ -28,7 +28,7 @@ func ExampleOpenVariable() {
 	// This example uses "constantvar", an in-memory implementation.
 	// We need to add a blank import line to register the constantvar provider's
 	// URLOpener, which implements runtimevar.VariableURLOpener:
-	// import _ "gocloud.dev/runtimevar/constantvar"
+	// import _ "github.com/eliben/gocdkx/runtimevar/constantvar"
 	// constantvar registers for the "constant" scheme.
 	// All runtimevar.OpenVariable URLs also work with "runtimevar+" or "runtimevar+variable+" prefixes,
 	// e.g., "runtimevar+constant://..." or "runtimevar+variable+constant://...".

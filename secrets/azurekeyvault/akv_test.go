@@ -26,10 +26,10 @@ import (
 	"github.com/Azure/azure-sdk-for-go/services/keyvault/v7.0/keyvault"
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"gocloud.dev/internal/testing/setup"
-	"gocloud.dev/secrets"
-	"gocloud.dev/secrets/driver"
-	"gocloud.dev/secrets/drivertest"
+	"github.com/eliben/gocdkx/internal/testing/setup"
+	"github.com/eliben/gocdkx/secrets"
+	"github.com/eliben/gocdkx/secrets/driver"
+	"github.com/eliben/gocdkx/secrets/drivertest"
 )
 
 // Prerequisites for --record mode

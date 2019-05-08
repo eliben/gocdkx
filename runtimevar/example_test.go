@@ -19,10 +19,10 @@ import (
 	"fmt"
 	"log"
 
-	"gocloud.dev/runtimevar"
-	"gocloud.dev/runtimevar/constantvar"
+	"github.com/eliben/gocdkx/runtimevar"
+	"github.com/eliben/gocdkx/runtimevar/constantvar"
 
-	_ "gocloud.dev/runtimevar/gcpruntimeconfig"
+	_ "github.com/eliben/gocdkx/runtimevar/gcpruntimeconfig"
 	runtimeconfig "google.golang.org/genproto/googleapis/cloud/runtimeconfig/v1beta1"
 	"google.golang.org/grpc/status"
 )
@@ -36,7 +36,7 @@ func ExampleVariable_Latest_jsonVariable() {
 	}
 
 	// Here's our sample JSON config.
-	const jsonConfig = `{"Host": "gocloud.dev", "Port": 8080, "Username": "testuser"}`
+	const jsonConfig = `{"Host": "github.com/eliben/gocdkx", "Port": 8080, "Username": "testuser"}`
 
 	// We need a Decoder that decodes raw bytes into our config.
 	decoder := runtimevar.NewDecoder(DBConfig{}, runtimevar.JSONDecode)
@@ -55,7 +55,7 @@ func ExampleVariable_Latest_jsonVariable() {
 	fmt.Printf("Config: %+v\n", snapshot.Value.(DBConfig))
 
 	// Output:
-	// Config: {Host:gocloud.dev Port:8080 Username:testuser}
+	// Config: {Host:github.com/eliben/gocdkx Port:8080 Username:testuser}
 }
 
 func ExampleVariable_Latest_stringVariable() {
@@ -82,7 +82,7 @@ func ExampleSnapshot_As() {
 	// demonstrates access to the underlying
 	// google.golang.org/genproto/googleapis/cloud/runtimeconfig.Variable type.
 	// The types exposed for As by gcpruntimeconfig are documented in
-	// https://godoc.org/gocloud.dev/runtimevar/gcpruntimeconfig#hdr-As
+	// https://godoc.org/github.com/eliben/gocdkx/runtimevar/gcpruntimeconfig#hdr-As
 	ctx := context.Background()
 
 	const url = "gcpruntimeconfig://proj/config/key"
@@ -107,7 +107,7 @@ func ExampleVariable_ErrorAs() {
 	// demonstrates access to the underlying google.golang.org/grpc/status.Status
 	// type.
 	// The types exposed for As by gcpruntimeconfig are documented in
-	// https://godoc.org/gocloud.dev/runtimevar/gcpruntimeconfig#hdr-As
+	// https://godoc.org/github.com/eliben/gocdkx/runtimevar/gcpruntimeconfig#hdr-As
 	ctx := context.Background()
 
 	const url = "gcpruntimeconfig://proj/wrongconfig/key"

@@ -25,7 +25,7 @@ import (
 	"sync"
 
 	"github.com/google/wire"
-	"gocloud.dev/health"
+	"github.com/eliben/gocdkx/health"
 
 	"go.opencensus.io/trace"
 )

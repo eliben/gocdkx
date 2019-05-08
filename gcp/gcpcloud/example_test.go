@@ -22,9 +22,9 @@ import (
 
 	"github.com/google/wire"
 	"go.opencensus.io/trace"
-	"gocloud.dev/gcp/gcpcloud"
-	"gocloud.dev/health"
-	"gocloud.dev/server"
+	"github.com/eliben/gocdkx/gcp/gcpcloud"
+	"github.com/eliben/gocdkx/health"
+	"github.com/eliben/gocdkx/server"
 )
 
 // This is an example of how to bootstrap an HTTP server running on

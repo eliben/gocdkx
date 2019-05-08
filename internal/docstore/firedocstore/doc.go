@@ -41,4 +41,4 @@
 // https://cloud.google.com/firestore/docs/query-data/indexing for details.
 //
 // See https://cloud.google.com/firestore/docs/query-data/queries for more information on Firestore queries.
-package firedocstore // import "gocloud.dev/internal/docstore/firedocstore"
+package firedocstore // import "github.com/eliben/gocdkx/internal/docstore/firedocstore"

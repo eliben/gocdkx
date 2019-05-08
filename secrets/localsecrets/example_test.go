@@ -19,8 +19,8 @@ import (
 	"fmt"
 	"log"
 
-	"gocloud.dev/secrets"
-	"gocloud.dev/secrets/localsecrets"
+	"github.com/eliben/gocdkx/secrets"
+	"github.com/eliben/gocdkx/secrets/localsecrets"
 )
 
 func Example() {
