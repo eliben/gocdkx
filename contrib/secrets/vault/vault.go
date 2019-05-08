@@ -62,6 +62,7 @@ func Dial(ctx context.Context, cfg *Config) (*api.Client, error) {
 		return nil, errors.New("no auth Config provided")
 	}
 	_ = escape.HexUnescape("foo")
+	escape.FooBar123()
 	c, err := api.NewClient(&cfg.APIConfig)
 	if err != nil {
 		return nil, err
