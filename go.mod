@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-module gocloud.dev
+module github.com/eliben/gocdkx
 
 require (
 	cloud.google.com/go v0.37.4
