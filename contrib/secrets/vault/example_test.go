@@ -18,9 +18,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/hashicorp/vault/api"
+	"github.com/eliben/gocdkx/contrib/secrets/vault"
 	"github.com/eliben/gocdkx/secrets"
-	"github.com/eliben/gocdkx/secrets/vault"
+	"github.com/hashicorp/vault/api"
 )
 
 func Example_encrypt() {
