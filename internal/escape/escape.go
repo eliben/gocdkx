@@ -22,6 +22,9 @@ import (
 	"strings"
 )
 
+func FooBar123() {
+}
+
 // NonUTF8String is a string for which utf8.ValidString returns false.
 const NonUTF8String = "\xbd\xb2"
 

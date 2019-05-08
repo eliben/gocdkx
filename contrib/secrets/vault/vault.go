@@ -40,9 +40,10 @@ import (
 	"path"
 	"sync"
 
-	"github.com/hashicorp/vault/api"
 	"github.com/eliben/gocdkx/gcerrors"
+	"github.com/eliben/gocdkx/internal/escape"
 	"github.com/eliben/gocdkx/secrets"
+	"github.com/hashicorp/vault/api"
 )
 
 // Config is the authentication configurations of the Vault server.
@@ -60,6 +61,7 @@ func Dial(ctx context.Context, cfg *Config) (*api.Client, error) {
 	if cfg == nil {
 		return nil, errors.New("no auth Config provided")
 	}
+	_ = escape.HexUnescape("foo")
 	c, err := api.NewClient(&cfg.APIConfig)
 	if err != nil {
 		return nil, err
