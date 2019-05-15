@@ -7,7 +7,7 @@ require (
 	github.com/coreos/etcd v3.3.13+incompatible // indirect
 	github.com/dimchansky/utfbom v1.1.0 // indirect
 	github.com/elazarl/go-bindata-assetfs v1.0.0 // indirect
-	github.com/eliben/gocdkx v0.42.1-0.20190508231400-b137da0aba26
+	github.com/eliben/gocdkx v0.43
 	github.com/golang/groupcache v0.0.0-20190129154638-5b532d6fd5ef // indirect
 	github.com/gorilla/websocket v1.4.0 // indirect
 	github.com/grpc-ecosystem/go-grpc-middleware v1.0.0 // indirect
